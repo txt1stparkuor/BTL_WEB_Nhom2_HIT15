@@ -15,14 +15,12 @@ inputLocation.addEventListener('click', (e) => {
     }
     detectLocation.style.display = 'block';
 });
-document.addEventListener('click', (e) => {
-    if (!detectLocation.contains(e.target) && e.target !== inputLocation) {
-        detectLocation.style.display = 'none';
-    }
+document.addEventListener('click', () => {
+    detectLocation.style.display = 'none';
+
 });
 
 //HIGHLIGHT-CARDS
-
 const highlightCards = [
     {
         id: 1,
@@ -64,3 +62,164 @@ function renderHighlightCards(highlightCards) {
 }
 
 renderHighlightCards(highlightCards);
+
+//SEE MORE SEE LESS
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.querySelector(".center");
+    const hiddenItems = document.querySelectorAll(".hidden");
+
+    toggleButton.addEventListener("click", () => {
+        const isHidden = hiddenItems[0].classList.contains("hidden");
+        console.log("Toggle clicked, isHidden:", isHidden);
+
+        hiddenItems.forEach(item => {
+            if (isHidden) {
+                item.classList.remove("hidden");
+            } else {
+                item.classList.add("hidden");
+            }
+        });
+
+
+        toggleButton.innerHTML = isHidden ?
+            `See less <i class="fa-solid fa-chevron-up"></i>` :
+            `See more <i class="fa-solid fa-chevron-down"></i>`;
+    });
+});
+
+//EMAIL PHONE
+const emailButton = document.querySelector("#email");
+const phoneButton = document.querySelector("#phone");
+const emailInput = document.querySelector(".email-input");
+
+
+phoneButton.addEventListener("click", function () {
+    emailInput.innerHTML = ``;
+    emailInput.innerHTML = `
+        <div class="phone-input">
+            <div class="phone-code">
+                <input type="text" placeholder="+91" readonly>
+                <div class="arrow-down">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+            <div class="country-list hidden">
+                    <div class="country-item">+84</div>
+                    <div class="country-item">+1</div>
+                    <div class="country-item">+32</div>
+                    <div class="country-item">+91</div>
+                    <div class="country-item">+60</div>
+                    <div class="country-item">+63</div>
+                    <div class="country-item">+94</div>
+                    <div class="country-item">+50</div>
+                    <div class="country-item">+50</div>
+                    <div class="country-item">+50</div>
+                    <div class="country-item">+50</div>
+                    <div class="country-item">+50</div>
+                    <div class="country-item">+50</div>
+                    <div class="country-item">+50</div>
+                    <div class="country-item">+50</div>
+                    <div class="country-item">+50</div>
+                    </div>
+            <div class="type-container">
+                <input type="text" placeholder="type here...">
+            </div>
+        </div>
+        <button>Share App Link</button>
+    `;
+    const phoneCode = emailInput.querySelector(".phone-code");
+    const countryList = emailInput.querySelector(".country-list");
+    const phoneInput = phoneCode.querySelector("input");
+
+    phoneCode.addEventListener("click", function () {
+        countryList.classList.toggle("hidden");
+    });
+
+    // Handle country selection
+    countryList.addEventListener("click", function (e) {
+        if (e.target.classList.contains("country-item")) {
+            phoneInput.value = e.target.textContent;
+            countryList.classList.add("hidden");
+        }
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", function (e) {
+        if (!phoneCode.contains(e.target)) {
+            countryList.classList.add("hidden");
+        }
+    });
+})
+
+emailButton.addEventListener("click", function () {
+    emailInput.innerHTML = '';
+    emailInput.innerHTML = `
+        <input type = "email" placeholder = "Email" id = "email" >
+        <button>Share App Link</button>
+    `;
+})
+
+//EXPLORE OPTION NEAR ME
+const accordion_containers = document.querySelectorAll(".accordion-container");
+accordion_containers.forEach((accordion_container) => {
+    accordion_container.addEventListener("click", function () {
+        const data = this.nextElementSibling; // get data
+        data.classList.toggle("show");
+        const icon = this.querySelector("i");
+        icon.classList.toggle("animate");
+    });
+});
+
+// FOOTER
+const firstLanguageSelect = document.querySelector("#firstLanguage");
+const secondLanguageSelect = document.querySelector("#secondLanguage");
+
+firstLanguageSelect.addEventListener("click", function () {
+    const nationList = document.querySelector(".nation-list");
+    nationList.style.display = "flex";
+})
+
+secondLanguageSelect.addEventListener("click", function () {
+    const languageList = document.querySelector(".language-list");
+    languageList.style.display = "block";
+})
+
+const nationItems = document.querySelectorAll(".nation-item");
+const selectedNation = document.querySelector("#firstLanguage p");
+const selectedNationFlag = document.querySelector("#firstLanguage .nation-flag img");
+
+nationItems.forEach(item => {
+    item.addEventListener("click", function () {
+        const nationText = this.querySelector("p").textContent;
+        selectedNation.textContent = nationText;
+        const newFlagSrc = this.querySelector(".nation-flag img").src;
+        selectedNationFlag.src = newFlagSrc;
+        const nationList = document.querySelector(".nation-list");
+        nationList.style.display = "none";
+    });
+});
+
+const languageItems = document.querySelectorAll(".language-item");
+const selectedLanguage = document.querySelector("#secondLanguage p");
+languageItems.forEach(item => {
+    item.addEventListener("click", function () {
+        selectedLanguage.textContent = this.textContent;
+        const languageList = document.querySelector(".language-list");
+        languageList.style.display = "none";
+    });
+});
+
+document.addEventListener("click", function (e) {
+    const languageList = document.querySelector(".language-list");
+    const secondLanguageSelect = document.querySelector("#secondLanguage");
+    const nationList = document.querySelector(".nation-list");
+    const firstLanguageSelect = document.querySelector("#firstLanguage");
+
+    if (!languageList.contains(e.target) && !secondLanguageSelect.contains(e.target)) {
+        languageList.style.display = "none";
+    }
+
+    if (!nationList.contains(e.target) && !firstLanguageSelect.contains(e.target)) {
+        nationList.style.display = "none";
+    }
+});
