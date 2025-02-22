@@ -231,3 +231,38 @@ menuIcon.addEventListener('click', function () {
         signupBtn.click();
     });
 });
+
+const initPhoneCodeSelection = () => {
+    const phoneCode = loginOverlay.querySelector(".phone-code");
+    const countryList = loginOverlay.querySelector(".country-list");
+    const phoneInput = phoneCode.querySelector("input");
+    const countryItems = loginOverlay.querySelectorAll(".country-item");
+    const phoneNumberInput = loginOverlay.querySelector(".type-container input");
+
+    phoneCode.addEventListener("click", (e) => {
+        e.stopPropagation();
+        countryList.classList.toggle("hidden");
+    });
+
+    countryItems.forEach(item => {
+        item.addEventListener("click", () => {
+            const code = item.textContent.trim();
+            phoneInput.value = code;
+
+            countryList.classList.add("hidden");
+        });
+    });
+
+    document.addEventListener("click", () => {
+        countryList.classList.add("hidden");
+    });
+
+    phoneNumberInput.addEventListener("input", (e) => {
+        e.target.value = e.target.value.replace(/[^0-9]/g, '');
+
+        if (e.target.value.length > 15) {
+            e.target.value = e.target.value.slice(0, 15);
+        }
+    });
+};
+const phoneCodeHandler = initPhoneCodeSelection();
