@@ -21,7 +21,6 @@
         padding: 1em 6em !important;
     }
 
-
 }
 
 
@@ -111,7 +110,7 @@
 
 }
 
-@media (width <= 770px) {
+@media (width <=770px) {
 
     .menu-icon {
         display: block;
