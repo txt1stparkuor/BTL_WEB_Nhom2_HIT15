@@ -247,40 +247,94 @@ const Collections = [
     },
 
 ];
-// HEADER
-const inputLocation = document.querySelector('.input-location');
-const detectLocation = document.querySelector('.detect-location');
+//LOAD COMPONENTS
+document.addEventListener('DOMContentLoaded', function () {
+    fetch('../../components/header/index.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+            const headerScript = document.createElement('script');
+            headerScript.src = '../../components/header/script.js';
+            document.body.appendChild(headerScript);
+        });
+    fetch('../../components/explore-options-near-me/index.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('explore-container').innerHTML = data;
+            const exploreScript = document.createElement('script');
+            exploreScript.src = '../../components/explore-options-near-me/script.js';
+            document.body.appendChild(exploreScript);
+        });
+    fetch('../../components/footer/index.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+            const footerScript = document.createElement('script');
+            footerScript.src = '../../components/footer/script.js';
+            document.body.appendChild(footerScript);
+        });
+})
 
-inputLocation.addEventListener('click', (e) => {
-    e.stopPropagation(); // Prevent event from bubbling up
-    const arrowDown = inputLocation.querySelector('.arrow-down');
-    const currIcon = arrowDown.querySelector('i');
 
-    if (currIcon.className === 'fa-solid fa-caret-down') {
-        currIcon.className = 'fa-solid fa-caret-up';
-        arrowDown.style.transform = 'translateY(3px)';
-        detectLocation.style.display = 'flex'; // Change to flex
-    } else {
-        currIcon.className = 'fa-solid fa-caret-down';
-        arrowDown.style.transform = 'translateY(0)';
-    }
-});
+// const initPhoneCodeSelection = () => {
+//     const phoneCode = loginOverlay.querySelector(".phone-code");
+//     const countryList = loginOverlay.querySelector(".country-list");
+//     const phoneInput = phoneCode.querySelector("input");
+//     const countryItems = loginOverlay.querySelectorAll(".country-item");
+//     const phoneNumberInput = loginOverlay.querySelector(".type-container input");
 
-detectLocation.addEventListener('click', (e) => {
-    e.stopPropagation();
-});
+//     phoneCode.addEventListener("click", (e) => {
+//         e.stopPropagation();
+//         countryList.classList.toggle("hidden");
+//     });
 
-document.addEventListener('click', (e) => {
-    if (!inputLocation.contains(e.target) && !detectLocation.contains(e.target)) {
-        detectLocation.style.display = 'none';
-        const arrowDown = inputLocation.querySelector('.arrow-down');
-        const currIcon = arrowDown.querySelector('i');
-        currIcon.className = 'fa-solid fa-caret-down';
-        arrowDown.style.transform = 'translateY(0)';
-    }
-});
+//     countryItems.forEach(item => {
+//         item.addEventListener("click", () => {
+//             const code = item.textContent.trim();
+//             phoneInput.value = code;
+
+//             countryList.classList.add("hidden");
+//         });
+//     });
+
+//     document.addEventListener("click", () => {
+//         countryList.classList.add("hidden");
+//     });
+
+//     phoneNumberInput.addEventListener("input", (e) => {
+//         e.target.value = e.target.value.replace(/[^0-9]/g, '');
+
+//         if (e.target.value.length > 15) {
+//             e.target.value = e.target.value.slice(0, 15);
+//         }
+//     });
+// };
+
+// const phoneCodeHandler = initPhoneCodeSelection();
+
 
 // HANDPICKED
+document.addEventListener('DOMContentLoaded', function () {
+    const handpickedTitle = document.querySelector('.handpicked-title');
+    const savedTitle = document.querySelector('.saved-title');
+
+    handpickedTitle.classList.add('active');
+
+    handpickedTitle.addEventListener('click', function () {
+        handpickedTitle.classList.add('active');
+        handpickedTitle.style.color = '#EF4F5F';
+        savedTitle.classList.remove('active');
+        savedTitle.style.color = '#666666';
+    });
+
+    savedTitle.addEventListener('click', function () {
+        savedTitle.classList.add('active');
+        savedTitle.style.color = '#EF4F5F';
+        handpickedTitle.classList.remove('active');
+        handpickedTitle.style.color = '#666666';
+    });
+});
+
 function displayProducts(Collections) {
     const handpicked = document.querySelector('.handpicked');
     handpicked.innerHTML = '';
@@ -303,68 +357,3 @@ function displayProducts(Collections) {
 
 displayProducts(Collections);
 
-
-//EXPLORE OPTION NEAR ME
-const accordion_containers = document.querySelectorAll(".accordion-container");
-accordion_containers.forEach((accordion_container) => {
-    accordion_container.addEventListener("click", function () {
-        const data = this.nextElementSibling; // get data
-        data.classList.toggle("show");
-        const icon = this.querySelector("i");
-        icon.classList.toggle("animate");
-    });
-});
-
-// FOOTER
-const firstLanguageSelect = document.querySelector("#firstLanguage");
-const secondLanguageSelect = document.querySelector("#secondLanguage");
-
-firstLanguageSelect.addEventListener("click", function () {
-    const nationList = document.querySelector(".nation-list");
-    nationList.style.display = "flex";
-})
-
-secondLanguageSelect.addEventListener("click", function () {
-    const languageList = document.querySelector(".language-list");
-    languageList.style.display = "block";
-})
-
-const nationItems = document.querySelectorAll(".nation-item");
-const selectedNation = document.querySelector("#firstLanguage p");
-const selectedNationFlag = document.querySelector("#firstLanguage .nation-flag img");
-
-nationItems.forEach(item => {
-    item.addEventListener("click", function () {
-        const nationText = this.querySelector("p").textContent;
-        selectedNation.textContent = nationText;
-        const newFlagSrc = this.querySelector(".nation-flag img").src;
-        selectedNationFlag.src = newFlagSrc;
-        const nationList = document.querySelector(".nation-list");
-        nationList.style.display = "none";
-    });
-});
-
-const languageItems = document.querySelectorAll(".language-item");
-const selectedLanguage = document.querySelector("#secondLanguage p");
-languageItems.forEach(item => {
-    item.addEventListener("click", function () {
-        selectedLanguage.textContent = this.textContent;
-        const languageList = document.querySelector(".language-list");
-        languageList.style.display = "none";
-    });
-});
-
-document.addEventListener("click", function (e) {
-    const languageList = document.querySelector(".language-list");
-    const secondLanguageSelect = document.querySelector("#secondLanguage");
-    const nationList = document.querySelector(".nation-list");
-    const firstLanguageSelect = document.querySelector("#firstLanguage");
-
-    if (!languageList.contains(e.target) && !secondLanguageSelect.contains(e.target)) {
-        languageList.style.display = "none";
-    }
-
-    if (!nationList.contains(e.target) && !firstLanguageSelect.contains(e.target)) {
-        nationList.style.display = "none";
-    }
-});
