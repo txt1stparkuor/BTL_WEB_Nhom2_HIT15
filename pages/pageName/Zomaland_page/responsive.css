@@ -1,0 +1,19 @@
+@media (max-width: 1024px) {
+    .banner-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .banner-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .header {
+        font-size: 14px;
+    }
+    .info-section {
+        font-size: 16px;
+    }
+    .partners-container {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
