@@ -10,7 +10,7 @@
     .card { min-width: 280px; }
     .carousel-title { font-size: 24px; }
 }
-/* ✅ Màn hình vừa (768px - 1024px): Hiển thị 2 cột */
+
 @media (max-width: 1024px) {
     header {
         padding: 8px 40px;
@@ -48,8 +48,9 @@
         width: 45%;
     }
     .footer-container {
-        flex-direction: column;
         align-items: center;
+        display: flex;
+        flex-direction: row;
     }
 
     .footer-links {
@@ -83,7 +84,6 @@
     }
 }
 
-/* ✅ Màn hình nhỏ (dưới 768px): Chuyển thành 1 cột */
 @media (max-width: 768px) {
     header {
         padding: 6px 40px; 
@@ -207,7 +207,6 @@
     }
 
 }
-/* ✅ Màn hình nhỏ (dưới 768px)*/
 @media (max-width: 360px) {
     .carousel-container { width: 95%; }
     .card { min-width: 90%; max-width: 90%; margin: 0 auto; }
