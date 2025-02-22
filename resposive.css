@@ -1,0 +1,244 @@
+@media (width <=1380px) {
+    header {
+        min-height: 420px;
+    }
+
+    .search-container input {
+        width: 20em;
+    }
+
+    .highlight-cards {
+        padding: 0 8.6em;
+    }
+}
+
+
+@media (width <=1024px) {
+    .header-nav {
+        padding: 1.2em 0em;
+    }
+
+    .highlight-cards {
+        padding: 0em;
+    }
+
+    .collections-sections {
+        gap: .65em;
+    }
+
+    .content-navlink p {
+        font-size: 1.03em;
+    }
+
+    .nav_items ul {
+        width: max-content;
+        gap: 1.25em;
+    }
+
+    .search-container input::placeholder {
+        font-size: 0.9em;
+    }
+
+    .wrapper {
+        max-width: 950px;
+    }
+
+}
+
+@media (width <=880px) {
+    .wrapper {
+        max-width: 840px;
+    }
+
+    .input-container {
+        width: 750px;
+    }
+
+    .accordion-data ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(7em, 1fr));
+    }
+}
+
+@media (width < 768px) {
+    .header-nav {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        color: white;
+        margin: 1em 0 0 1em;
+    }
+
+    .header-content {
+        margin-top: 1em;
+    }
+
+    #main-pagetitle {
+        font-size: 2.2em;
+    }
+
+    .input-container {
+        width: 600px;
+    }
+
+    .wrapper {
+        max-width: 730px;
+    }
+
+    .localities-list {
+        gap: 10px;
+    }
+
+    .app-content .heading {
+        font-size: 1.8em;
+    }
+}
+
+@media (width <=635px) {
+    .content-navlink {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1em;
+    }
+
+    .content-navlink {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1em;
+    }
+
+
+}
+
+@media (width <=600px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-container {
+        width: 510px;
+    }
+
+    #main-pagetitle {
+        margin: 0 .3em;
+    }
+
+    .input-location .arrow-down {
+        display: none;
+    }
+
+    .wrapper {
+        max-width: 530px;
+    }
+
+    .collections-sections {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+        gap: 1em;
+    }
+
+    .collections-sections>div {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .localities-list {
+        gap: 10px;
+    }
+
+    .zomato-app-container {
+        flex-direction: column-reverse;
+        gap: 1em;
+    }
+
+    .app-content {
+        width: 100%;
+        align-items: center;
+    }
+
+    .download-buttons {
+        flex-direction: column !important;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .download-buttons>div {
+        width: 70%;
+        max-width: 200px;
+    }
+
+    .download-buttons img {
+        width: 100%;
+        height: auto;
+    }
+
+    .store-section {
+        width: 100%;
+    }
+
+    .download-buttons .download img {
+        border-radius: .4em;
+    }
+}
+
+@media (width < 533px) {
+
+    .input-container {
+        width: 375px;
+    }
+
+    .highlight-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .content-navlink {
+        display: grid;
+    }
+
+    .wrapper {
+        max-width: 430px;
+    }
+
+    .locality {
+        width: 48.6%;
+    }
+
+    .header-footer {
+        flex-direction: column;
+    }
+
+    .content-navlink:last-child {
+        grid-row: span 2;
+    }
+}
+
+@media (width < 380px) {
+    .wrapper {
+        max-width: 280px;
+    }
+
+    .input-container {
+        display: none;
+    }
+
+    .locality {
+        width: 100%;
+    }
+
+    .store-section {
+        width: 100%;
+    }
+
+    .app-options {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+
+}
