@@ -37,13 +37,11 @@
   }
 }
 @media (width <= 576px) {
-  :root {
-    --fs--base: 0.75rem;
-  }
   .collections .description-wrap a {
     position: absolute;
     top: 1rem;
     right: 1rem;
+    font-size: 0.75rem;
   }
   .end-of-search {
     font-size: 1rem;
