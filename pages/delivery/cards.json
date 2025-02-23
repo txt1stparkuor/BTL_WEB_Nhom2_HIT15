@@ -1,0 +1,572 @@
+[
+  {
+    "name": "KFC",
+    "rating": 4.4,
+    "cuisine": "Burger, Rolls, Fast Food",
+    "price": "₹200 for one",
+    "deliveryTime": "22 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/chains/1/931/a3e1156c7e650e018430e6ee6674037d_o2_featured_v2.jpg",
+    "isPromoted": true,
+    "discount": null
+  },
+  {
+    "name": "Domino's Pizza",
+    "rating": 4.4,
+    "cuisine": "Pizza, Beverages, Desserts",
+    "price": "₹150 for one",
+    "deliveryTime": "25 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/8/20424478/fc9c1ad494fff8caea70bba960df0f27_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "Flat ₹150 OFF + Free Delivery"
+  },
+  {
+    "name": "Apni Rasoi",
+    "rating": 4.1,
+    "cuisine": "North Indian, Chinese, Fast Food, Beverages",
+    "price": "₹150 for one",
+    "deliveryTime": "28 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/8/20614928/811a1f150a0c57f670920151098b5589_o2_featured_v2.jpg",
+    "isPromoted": true,
+    "discount": "₹200 OFF"
+  },
+  {
+    "name": "Bangla Sweet House",
+    "rating": 4.3,
+    "cuisine": "Mithai, Street Food, North Indian",
+    "price": "₹100 for one",
+    "deliveryTime": "18 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/4/6284/7ee9d6c8a406d64e9fcbbdf33e177ecd_o2_featured_v2.jpg",
+    "isPromoted": true,
+    "discount": "Flat 15% OFF"
+  },
+  {
+    "name": "Burger King",
+    "rating": 4.3,
+    "cuisine": "Burger, Fast Food, Desserts, Shake",
+    "price": "₹200 for one",
+    "deliveryTime": "27 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/8/310448/cc8f83eb4e1cb9421c88bfb16fb7a82e_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": null
+  },
+  {
+    "name": "Bangla Foods",
+    "rating": 4.3,
+    "cuisine": "North Indian, South Indian, Fast Food, Street Food, Chinese, BBQ, Desserts, Beverages",
+    "price": "₹150 for one",
+    "deliveryTime": "25 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/2/1882/911f11138cf48139bc052a7f31c16b5c_o2_featured_v2.jpg",
+    "isPromoted": true,
+    "discount": "50% OFF"
+  },
+  {
+    "name": "Haldiram's",
+    "rating": 4.3,
+    "cuisine": "North Indian, Mithai, Street Food, South Indian, Chinese, Beverages",
+    "price": "₹200 for one",
+    "deliveryTime": "30 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/0/19677790/198297c1d16133ce570573e137525c12_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": null
+  },
+  {
+    "name": "McDonald's",
+    "rating": 4.5,
+    "cuisine": "Burger, Wraps, Fast Food, Beverages",
+    "price": "₹200 for one",
+    "deliveryTime": "23 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/7/9947/198638dd04202c06899a94a6bd191651_o2_featured_v2.jpg",
+    "isPromoted": true,
+    "discount": null
+  },
+  {
+    "name": "Pizza Hut",
+    "rating": 4.1,
+    "cuisine": "Pizza, Fast Food, Italian, Desserts, Beverages",
+    "price": "₹250 for one",
+    "deliveryTime": "32 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/chains/6/246/3209f3c391292e0b9be5d8adc0c788e0_o2_featured_v2.jpg",
+    "isPromoted": true,
+    "discount": "40% OFF"
+  },
+  {
+    "name": "Kaleva",
+    "rating": 4.6,
+    "cuisine": "Mithai, Street Food, Desserts",
+    "price": "₹200 for one",
+    "deliveryTime": "21 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/4/1204/76ea96b36d6530deba8f3f46cc02229d_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": null
+  },
+  {
+    "name": "Bikanervala",
+    "rating": 4.2,
+    "cuisine": "Mithai, North Indian, South Indian, Chinese, Fast Food, Street Food, Beverages, Desserts",
+    "price": "₹200 for one",
+    "deliveryTime": "29 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/chains/1/491/aa50c08ea5ade50a6d1c2d7aca242a1c_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": null
+  },
+  {
+    "name": "La Pino'z Pizza",
+    "rating": 4.3,
+    "cuisine": "Pizza, Pasta, Italian, Fast Food",
+    "price": "₹250 for one",
+    "deliveryTime": "29 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/5/20462635/f5120fc829aace9a4f1d08670d2352f9_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "₹200 OFF"
+  },
+  {
+    "name": "Bakingo",
+    "rating": 4.6,
+    "cuisine": "Bakery, Desserts",
+    "price": "₹200 for one",
+    "deliveryTime": "27 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/6/20546986/c377b4437ece9e8217e39df18a80123b_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": null
+  },
+  {
+    "name": "Subway",
+    "rating": 4.0,
+    "cuisine": "Healthy Food, Sandwich, Fast Food, Wraps, Salad, Beverages",
+    "price": "₹200 for one",
+    "deliveryTime": "22 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/chains/7/147/a0e8c0e70ad8ee8d391c5f7b25b2697d_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": null
+  },
+  {
+    "name": "Chinese Wok",
+    "rating": 4.1,
+    "cuisine": "Chinese, Momos",
+    "price": "₹300 for one",
+    "deliveryTime": "85 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/0/21064730/399ffd1eadecf5f0d6d903fb72dd7377_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": null
+  },
+  {
+    "name": "Bikkgane Biryani",
+    "rating": 4.4,
+    "cuisine": "Biryani, Hyderabadi, Andhra, North Indian, Mughlai",
+    "price": "₹300 for one",
+    "deliveryTime": "23 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/8/18219558/a3a95bc0843f10a313ea8ed9b18943c8_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "30% OFF"
+  },
+  {
+    "name": "Hira Sweets",
+    "rating": 4.3,
+    "cuisine": "Mithai, North Indian, South Indian, Chinese, Pizza, Street Food, Ice Cream, Beverages",
+    "price": "₹200 for one",
+    "deliveryTime": "30 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/8/300658/8a79389ba4403877722b96844208134a_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": null
+  },
+  {
+    "name": "Burger Singh - Big Punjabi Burgers",
+    "rating": 4.2,
+    "cuisine": "Burger, Fast Food, Momos, Beverages, Desserts",
+    "price": "₹150 for one",
+    "deliveryTime": "24 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/chains/1/310301/9dd8620e1da26e1c0a2f9452edb9866b_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "₹125 OFF"
+  },
+  {
+    "name": "Biryani Blues",
+    "rating": 4.1,
+    "cuisine": "Biryani, Hyderabadi, Mughlai",
+    "price": "₹500 for one",
+    "deliveryTime": "24 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/5/18216915/8caf7a422126d39d8dba8a05f0d05cc8_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "₹125 OFF"
+  },
+  {
+    "name": "Wendy's Burgers",
+    "rating": 4.4,
+    "cuisine": "Burger, Fast Food, Mỹ",
+    "price": "₹150 for one",
+    "deliveryTime": "34 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/chains/3/312423/17cb2cb241e938516d13fba7d925437c_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "₹125 OFF"
+  },
+  {
+    "name": "RollsKing",
+    "rating": 4.2,
+    "cuisine": "Rolls, North Indian, Beverages, Fast Food",
+    "price": "₹150 for one",
+    "deliveryTime": "27 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/7/20495397/08d12bdd23ef7d465732b486a8749216_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": null
+  },
+  {
+    "name": "Nazeer Foods",
+    "rating": 4.2,
+    "cuisine": "North Indian, Mughlai, Biryani, Rolls, Burger, Fast Food, Beverages, Desserts",
+    "price": "₹400 for one",
+    "deliveryTime": "27 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/chains/3/1703/bbe629c938500c1c9c4a2ee98b413989_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "₹100 OFF"
+  },
+  {
+    "name": "The Burger Club",
+    "rating": 4.2,
+    "cuisine": "Burger, Fast Food, Coffee, Beverages",
+    "price": "₹350 for one",
+    "deliveryTime": "29 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/chains/3/17953943/816872e9f1fcc43304e21a0f050f5f21_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "₹150 OFF"
+  },
+  {
+    "name": "BOX8 - Desi Meals",
+    "rating": 4.5,
+    "cuisine": "North Indian, Wraps, Fast Food, Biryani, Ice Cream, Desserts",
+    "price": "₹100 for one",
+    "deliveryTime": "24 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/0/21122590/0c23e7a6e9584dfe989955a6b0005055_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "₹200 OFF"
+  },
+  {
+    "name": "Biryani By Kilo",
+    "rating": 4.2,
+    "cuisine": "Biryani, Hyderabadi, Kebab, North Indian, Ice Cream, Desserts",
+    "price": "₹250 for one",
+    "deliveryTime": "56 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/6/18658316/09e8a8c41bdca7aabd893e055417ff58_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "30% OFF"
+  },
+  {
+    "name": "Daily Kitchen - Homely Meals",
+    "rating": 4.3,
+    "cuisine": "North Indian, Desserts, Beverages",
+    "price": "₹100 for one",
+    "deliveryTime": "28 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/6/21122746/61a66eef378ecc378971a8a93935f3e6_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "₹200 OFF"
+  },
+  {
+    "name": "Big Bowl",
+    "rating": 4.1,
+    "cuisine": "North Indian, Chinese, Momos",
+    "price": "₹200 for one",
+    "deliveryTime": "87 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/chains/8/20284158/69f583ecbd3cbb6b887eca7d56ee925c_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": null
+  },
+  {
+    "name": "Theobroma",
+    "rating": 4.5,
+    "cuisine": "Bakery, Desserts, Beverages, Sandwich",
+    "price": "₹150 for one",
+    "deliveryTime": "19 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/5/18400755/30da1255431560975e5b6735f0068ee9_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "₹150 OFF"
+  },
+  {
+    "name": "Behrouz Biryani",
+    "rating": 4.4,
+    "cuisine": "Biryani, Kebab, North Indian",
+    "price": "₹300 for one",
+    "deliveryTime": "39 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/2/18365882/3fdd8cb8b023d23fd8076eaf7398c4f5_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "₹125 OFF"
+  },
+  {
+    "name": "Chaayos Chai+Snacks=Relax",
+    "rating": 4.5,
+    "cuisine": "Tea, Cafe, Coffee, Rolls, Fast Food, Beverages",
+    "price": "₹200 for one",
+    "deliveryTime": "22 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/chains/0/19036610/78a7b2b36d9231326fcf79fb64e59eaa_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "20% OFF"
+  },
+  {
+    "name": "Pizza Galleria",
+    "rating": 4.1,
+    "cuisine": "Pizza, Pasta, Fast Food, Mexican",
+    "price": "₹350 for one",
+    "deliveryTime": "40 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/8/20162348/53cfb915dce4f2638878a6b0e37176e5_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "50% OFF"
+  },
+  {
+    "name": "The Yellow Bowl",
+    "rating": 4.3,
+    "cuisine": "Chinese, North Indian, Momos, Rolls, Fast Food, Sichuan",
+    "price": "₹200 for one",
+    "deliveryTime": "41 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/8/19779568/76794ff5a1902f8632b3e5d69320f36e_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "₹150 OFF"
+  },
+  {
+    "name": "Khadak Singh Da Dhaba",
+    "rating": 4.1,
+    "cuisine": "North Indian, Mughlai, Chinese, Kebab, Rolls, Oriental",
+    "price": "₹250 for one",
+    "deliveryTime": "34 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/0/21505170/8af7a56cc9e754d1dd6ea50fcb8f892b_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "₹175 OFF"
+  },
+  {
+    "name": "Thalairaj Biryani",
+    "rating": 4.3,
+    "cuisine": "Andhra, Biryani, Hyderabadi, South Indian, Indian, Kebabs, Snacks, Beverages",
+    "price": "₹100 for one",
+    "deliveryTime": "49 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/0/21272580/a0a9cbe801e8f83cd21f7c14c6429bfc_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "Flat 20% OFF"
+  },
+  {
+    "name": "BTW",
+    "rating": 4.2,
+    "cuisine": "South Indian, Chinese, Street Food, Mithai",
+    "price": "₹200 for one",
+    "deliveryTime": "50 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/0/18416860/48e395826b26f206c36c2720d6ffbef7_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "50% OFF"
+  },
+  {
+    "name": "House Of Biryan- Biryani, Kepsa And More",
+    "rating": 4.2,
+    "cuisine": "Biryani, Kebab, Rolls, Mandi, Awadhi, Beverages",
+    "price": "₹400 for one",
+    "deliveryTime": "26 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/3/21371753/a02fe95f63e5c7d65e0aafec67c2ea06_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "₹125 OFF"
+  },
+  {
+    "name": "WOW! Momo",
+    "rating": 3.6,
+    "cuisine": "Momos, Fast Food, Chinese, Tibetan, Sichuan, Beverages, Desserts",
+    "price": "₹200 for one",
+    "deliveryTime": "33 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/1/20450721/b23ef9e9ee5409c9c31ef0d262b9f4d2_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "40% OFF"
+  },
+  {
+    "name": "Faasos - Wraps, Rolls & Shawarma",
+    "rating": 4.3,
+    "cuisine": "Rolls, Wraps, Shawarma",
+    "price": "₹200 for one",
+    "deliveryTime": "36 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/chains/2/18349892/f4b955e8e8271c4c99d8af4ee8edc604_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "₹125 OFF"
+  },
+  {
+    "name": "The Belgian Waffle Co.",
+    "rating": 4.5,
+    "cuisine": "Waffle, Ice Cream, Desserts, Beverages",
+    "price": "₹200 for one",
+    "deliveryTime": "30 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/6/20811096/ff1ac51fa8f96cde3f5174d8e333573b_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "₹200 OFF"
+  },
+  {
+    "name": "Sagar Ratna",
+    "rating": 4.4,
+    "cuisine": "South Indian, North Indian, Chinese",
+    "price": "₹250 for one",
+    "deliveryTime": "36 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/9/20473779/1c8ca8953a5cb6535a13135149298c7c_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": null
+  },
+  {
+    "name": "FreshMenu",
+    "rating": 4.2,
+    "cuisine": "Continental, Oriental, Asian, Chinese, Healthy Food, Sandwich, Desserts",
+    "price": "₹200 for one",
+    "deliveryTime": "45 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/8/20973288/b454dc2dbcab79e5dc6d4a149a38ee58_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "₹200 OFF"
+  },
+  {
+    "name": "Chicago Pizza",
+    "rating": 4.1,
+    "cuisine": "Pizza, Pasta, Sandwich, Rolls, Fast Food, Beverages",
+    "price": "₹200 for one",
+    "deliveryTime": "85 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/5/21112245/00ec62c416f95636e14e29104e5c7a14_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "₹125 OFF"
+  },
+  {
+    "name": "Veer Ji Malai Chaap Wale",
+    "rating": 3.9,
+    "cuisine": "North Indian, Rolls, Momos, Biryani, Chinese, Shake, Beverages",
+    "price": "₹250 for one",
+    "deliveryTime": "46 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/2/19253042/9dd27d8027aece9b7c85960662a7495a_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "Free Butter Naan"
+  },
+  {
+    "name": "Sita Ram Diwan Chand",
+    "rating": 4.2,
+    "cuisine": "North Indian",
+    "price": "₹100 for one",
+    "deliveryTime": "31 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/5/6075/0b5f5f8bc719027f17e2c22e48b52b4a_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": null
+  },
+  {
+    "name": "Pandit Ji Parantha Hut",
+    "rating": 4.1,
+    "cuisine": "North Indian, Street Food, Beverages",
+    "price": "₹100 for one",
+    "deliveryTime": "35 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/chains/6/307406/bc1a8c29f7ac21c07077a301ca4b4c00_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "50% OFF"
+  },
+  {
+    "name": "Starbucks Coffee",
+    "rating": 4.2,
+    "cuisine": "Cafe, Coffee, Beverages",
+    "price": "₹400 for one",
+    "deliveryTime": "22 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/1/301011/de38ff02d2b619420b3f0fa23ab7fe16_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "At ₹499 only"
+  },
+  {
+    "name": "Taco Bell",
+    "rating": 4.4,
+    "cuisine": "Fast Food, Mexican",
+    "price": "₹200 for one",
+    "deliveryTime": "27 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/chains/3/312123/da4d43ded57d72d5be14c6f1a5153b79_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "₹150 OFF"
+  },
+  {
+    "name": "Saravana Bhavan",
+    "rating": 4.4,
+    "cuisine": "South Indian, Desserts, Juices, Shake, Beverages",
+    "price": "₹300 for one",
+    "deliveryTime": "38 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/chains/9/899/6812b7d6166430abf0f62016ea8fe548_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": null
+  },
+  {
+    "name": "Cheesecake & Co.",
+    "rating": 4.6,
+    "cuisine": "Bakery",
+    "price": "₹200 for one",
+    "deliveryTime": "30 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/1/19946931/aaf74fafe2ce7719be04031a0cbd6ae4_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "₹100 OFF"
+  },
+  {
+    "name": "Nirula's",
+    "rating": 4.2,
+    "cuisine": "Ice Cream, Pizza, Fast Food, Momos, Shake, Sandwich, Rolls, Burger",
+    "price": "₹200 for one",
+    "deliveryTime": "25 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/7/18843927/8e1d47f6120a43f2a56490acb0874a90_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "10% OFF"
+  },
+  {
+    "name": "Grover Mithaivala",
+    "rating": 4.5,
+    "cuisine": "Mithai, Street Food, Desserts",
+    "price": "₹150 for one",
+    "deliveryTime": "27 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/2/19780472/dfd77cada7446d8aeb056a900b92c0a2_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": null
+  },
+  {
+    "name": "EatFit",
+    "rating": 4.4,
+    "cuisine": "Healthy Food, Pizza, North Indian, Burger, Biryani, Chinese, Desserts, Beverages",
+    "price": "₹200 for one",
+    "deliveryTime": "24 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/0/20269720/a4ce2bb94ef4c45225153d6c2a3842f9_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "50% OFF"
+  },
+  {
+    "name": "LunchBox - Meals and Thalis",
+    "rating": 4.2,
+    "cuisine": "North Indian, Biryani, Mughlai",
+    "price": "₹150 for one",
+    "deliveryTime": "36 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/chains/8/19410928/e2f0e806a7b0a064b439a5f8447f3dd3_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "₹100 OFF"
+  },
+  {
+    "name": "Rominus Pizza And Burger",
+    "rating": 4.2,
+    "cuisine": "Pizza, Fast Food, Burger, Pasta",
+    "price": "₹200 for one",
+    "deliveryTime": "43 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/5/19868535/0f914c5b91007207473cccae989f1ac2_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "60% OFF"
+  },
+  {
+    "name": "Naivedyam",
+    "rating": 4.6,
+    "cuisine": "South Indian, Desserts",
+    "price": "₹350 for one",
+    "deliveryTime": "28 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/chains/9/89/d8009ddf2854e6122e875d88619b4d4e_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": null
+  },
+  {
+    "name": "Great Indian Khichdi by EatFit",
+    "rating": 4.5,
+    "cuisine": "North Indian, Healthy Food, South Indian, Fast Food, Mithai, Juices, Desserts, Beverages",
+    "price": "₹150 for one",
+    "deliveryTime": "23 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/4/20269724/47dac45cd089192946fa68a93a91527c_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "50% OFF"
+  },
+  {
+    "name": "Oven Story Pizza - Standout Toppings",
+    "rating": 4.2,
+    "cuisine": "Pizza, Italian, Pasta",
+    "price": "₹200 for one",
+    "deliveryTime": "30 min",
+    "imageSrc": "https://b.zmtcdn.com/data/pictures/0/18469940/881d91378bb6bd8b6fa1196e82201a28_o2_featured_v2.jpg",
+    "isPromoted": false,
+    "discount": "₹150 OFF"
+  }
+]

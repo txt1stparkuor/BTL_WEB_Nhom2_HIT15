@@ -1,0 +1,125 @@
+@import url("../../assests/css/variable/foodAndRestaurant.css");
+img {
+  object-fit: cover;
+}
+a {
+  cursor: pointer;
+}
+/* main */
+.container {
+  position: relative;
+}
+.collections h1 {
+  padding-top: 0.5rem;
+  padding-bottom: 1.5rem;
+}
+.collections .description-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  color: rgb(54, 54, 54);
+  font-size: 1.125rem;
+  font-weight: 350;
+  gap: 0.5rem;
+}
+.collections .description-wrap p {
+  line-height: 1.4;
+}
+.collections .description-wrap a {
+  color: var(--brand-primary);
+  font-size: var(--fs--base);
+}
+.slider__card {
+  overflow: hidden;
+  border-radius: 6px;
+}
+.swiper-wrapper {
+  margin-bottom: 2rem;
+}
+.swiper-wrapper .slider__card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.05) 50%,
+    rgba(0, 0, 0, 0.05) 85%
+  );
+}
+.card__content {
+  align-self: end;
+  color: var(--primary-white);
+  padding: 0.5rem 1rem;
+  z-index: 10;
+}
+.slider__card .stacked > img {
+  aspect-ratio: 0.8125;
+}
+main .swiper-navigation {
+  --swiper-navigation-size: 0.75rem;
+  top: calc(50% - 2rem);
+  margin-top: 0;
+}
+.banner {
+  padding: 0 .5rem;
+  margin-bottom: 5vh;
+}
+
+/* restaurant */
+
+.restaurants {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.75rem;
+  padding: 0 0;
+}
+.restaurant .img-wrap .discount img {
+  width: 20px;
+  aspect-ratio: 1;
+}
+.restaurant {
+  padding: 10px;
+  transition: all 0.25s;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.restaurant:hover {
+  border-color: rgb(232, 232, 232);
+  box-shadow: rgba(28, 28, 28, 0.12) 0px 0.4rem 1.8rem;
+  box-sizing: border-box;
+}
+.restaurant .img-wrap img {
+  aspect-ratio: 1.4;
+  width: 100%;
+  border-radius: 15px;
+}
+.discount {
+  background: linear-gradient(
+    90deg,
+    rgb(17, 85, 203) 0%,
+    rgb(83, 140, 238) 25%,
+    rgb(17, 85, 203) 50%,
+    rgba(17, 85, 203, 0.8) 80%,
+    rgba(17, 85, 203, 0) 100%
+  );
+  display: flex;
+  align-items: center;
+  min-height: 30px;
+  align-self: flex-end;
+  color: var(--primary-white);
+  gap: 10px;
+  max-width: 50%;
+  margin-bottom: 0.75rem;
+  font-size: var(--fs--small-medium);
+  font-weight: 500;
+}
+footer i {
+  font-size: 1.2em;
+  margin: 0 .3em;
+}
