@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./resposive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
         integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,7 +19,10 @@
 <body>
     <!--HEADER-->
     <header>
-        <nav class="header-nav flex">
+        <div class="menu-icon hidden">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <nav class="header-nav flex wrapper">
             <div class="app_link">
                 <!-- icon mobilephone -->
                 <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" width="10" height="10" viewBox="0 0 20 20"
@@ -34,14 +38,14 @@
                         d="M18.5788 11.8561H18.3151H16.3193C15.7302 11.8561 15.251 12.3353 15.251 12.9253V13.0423C15.251 13.6329 15.7291 14.1107 16.3193 14.1107H16.5845H18.3139H18.5782C19.1693 14.1107 19.646 13.6329 19.6474 13.0423V12.9253C19.6472 12.3353 19.1705 11.8561 18.5788 11.8561Z">
                     </path>
                 </svg>
-                <a href="#">Get the app</a>
+                <a href="#">Get the App</a>
             </div>
             <nav class="nav_items">
                 <ul class="flex">
                     <li><a href="#">Investor relations</a></li>
                     <li><a href="#">Add restaurant</a></li>
-                    <li><a href="#">Log in</a></li>
-                    <li><a href="#">Sign up</a></li>
+                    <li id="login-btn"><a href="#">Log in</a></li>
+                    <li id="signup-btn"><a href="#">Sign up</a></li>
                 </ul>
             </nav>
         </nav>
@@ -50,7 +54,7 @@
                 <img src="https://b.zmtcdn.com/web_assets/8313a97515fcb0447d2d77c276532a511583262271.png
                 " alt="Logo">
             </div>
-            <h1>Discover the best foot & drinks in <span>Delhi NCR</span>
+            <h1 id="main-pagetitle">Discover the best food & drinks in <span>Delhi NCR</span>
             </h1>
 
             <div class="input-container flex">
@@ -76,10 +80,42 @@
         </div>
     </header>
     <!--HIGHLIGHT-CARDS-->
-    <div class="highlight-cards grid">
+    <div class="highlight-cards grid wrapper">
+        <div class="highlight-card">
+            <div class="img">
+                <img src="https://b.zmtcdn.com/webFrontend/e5b8785c257af2a7f354f1addaf37e4e1647364814.jpeg?output-format=webp"
+                    alt="Order Online" />
+            </div>
+            <div class="content">
+                <h4>Order Online</h4>
+                <p class="text-overflow">Stay home and order to your doorstep</p>
+            </div>
+        </div>
+
+        <div class="highlight-card">
+            <div class="img">
+                <img src="https://b.zmtcdn.com/webFrontend/d026b357feb0d63c997549f6398da8cc1647364915.jpeg?output-format=webp"
+                    alt="Dining" />
+            </div>
+            <div class="content">
+                <h4>Dining</h4>
+                <p class="text-overflow">View the city's favourite dining venues</p>
+            </div>
+        </div>
+
+        <div class="highlight-card">
+            <div class="img">
+                <img src="https://b.zmtcdn.com/data/o2_assets/371de657644f1b5818fcb5d83387c8c91722851940.png?output-format=webp"
+                    alt="Life Event" />
+            </div>
+            <div class="content">
+                <h4>Life Event</h4>
+                <p class="text-overflow">Explore the city's top nightlife outlets</p>
+            </div>
+        </div>
     </div>
     <!-- COLLECTIONS -->
-    <div class="collections-container">
+    <div class="collections-container wrapper">
         <h1>Collections</h1>
         <div class="content-navlink flex">
             <p>Explore curated lists of top restaurants, cafes, pubs, and bars in Delhi NCR, based on trends</p>
@@ -93,7 +129,7 @@
                 <img src="https://b.zmtcdn.com/data/collections/684397cd092de6a98862220e8cc40aca_1709810183.png?output-format=webp"
                     alt="">
                 <div class="content">
-                    <h4>Top Trending Spots
+                    <h4 class="text-overflow">Top Trending Spots
                     </h4>
                     <a href="#">
                         35 places
@@ -105,7 +141,7 @@
                 <img src="https://b.zmtcdn.com/data/collections/580b6d12d1d87fe4d2a8d0262ab4659b_1736428226.png?output-format=webp
                 " alt="">
                 <div class="content">
-                    <h4>Winter Special Menus
+                    <h4 class="text-overflow">Winter Special Menus
                     </h4>
                     <a href="#">
                         18 places
@@ -117,7 +153,7 @@
                 <img src="https://b.zmtcdn.com/data/collections/5fdc9918a60d2b7a4be41c1dddee5f29_1705558576.png?output-format=webp
                 " alt="">
                 <div class="content">
-                    <h4>Cozy Heated Outdoors
+                    <h4 class="text-overflow">Cozy Heated Outdoors
                     </h4>
                     <a href="#">
                         22 places
@@ -129,7 +165,7 @@
                 <img src="https://b.zmtcdn.com/data/collections/5cbe9bc87c9da2c6954772540d2e5db5_1730709895.png?output-format=webp"
                     alt="">
                 <div class="content">
-                    <h4>Best Insta-worth Places
+                    <h4 class="text-overflow">Best Insta-worth
                     </h4>
                     <a href="#">
                         50 places
@@ -141,15 +177,16 @@
         </div>
     </div>
     <!-- LOCALITIES -->
-    <div class="localities-container">
+    <div class="localities-container wrapper">
         <div class="title">
             <h1>Popular localities in and around <span class="city"> Delhi NCR</span>
             </h1>
             <div class="localities-list flex">
-
-                <div class="locality flex">
+                <div class=" locality flex">
                     <div class="left">
-                        <div class="locality-title">Connaught Place</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">Connaught Place</p>
+                        </div>
                         <div class="place">252 places</div>
                     </div>
                     <div class="right">
@@ -159,7 +196,9 @@
 
                 <div class="locality flex">
                     <div class="left">
-                        <div class="locality-title">Sector 29</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">Sector 29</p>
+                        </div>
                         <div class="place">153 places</div>
                     </div>
                     <div class="right">
@@ -169,7 +208,9 @@
 
                 <div class="locality flex">
                     <div class="left">
-                        <div class="locality-title">Sector 18, Noida</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">Sector 18, Noida</p>
+                        </div>
                         <div class="place">240 places</div>
                     </div>
                     <div class="right">
@@ -179,7 +220,9 @@
 
                 <div class="locality flex">
                     <div class="left">
-                        <div class="locality-title">Rajouri Garden</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">Rajouri Garden</p>
+                        </div>
                         <div class="place">413 places</div>
                     </div>
                     <div class="right">
@@ -189,7 +232,9 @@
 
                 <div class="locality flex">
                     <div class="left">
-                        <div class="locality-title">Saket</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">Saket</p>
+                        </div>
                         <div class="place">379 places</div>
                     </div>
                     <div class="right">
@@ -199,7 +244,9 @@
 
                 <div class="locality flex">
                     <div class="left">
-                        <div class="locality-title">DLF Cyber City</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">DLF Cyber City</p>
+                        </div>
                         <div class="place">155 places</div>
                     </div>
                     <div class="right">
@@ -209,7 +256,9 @@
 
                 <div class="locality flex">
                     <div class="left">
-                        <div class="locality-title">Golf Course Road</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">Golf Course Road</p>
+                        </div>
                         <div class="place">169 places</div>
                     </div>
                     <div class="right">
@@ -219,7 +268,9 @@
 
                 <div class="locality flex">
                     <div class="left">
-                        <div class="locality-title">DLF phase 4</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">DLF phase 4</p>
+                        </div>
                         <div class="place">246 places</div>
                     </div>
                     <div class="right">
@@ -229,7 +280,9 @@
 
                 <div class="locality hidden flex">
                     <div class="left">
-                        <div class="locality-title">Delhi University-GTB Nagar-Delhi</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">Delhi University-GTB Nagar-Delhi</p>
+                        </div>
                         <div class="place">204 places</div>
                     </div>
                     <div class="right">
@@ -239,7 +292,9 @@
 
                 <div class="locality hidden flex">
                     <div class="left">
-                        <div class="locality-title">Indirapuram</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">Indirapuram</p>
+                        </div>
                         <div class="place">888 places</div>
                     </div>
                     <div class="right">
@@ -249,7 +304,9 @@
 
                 <div class="locality hidden flex">
                     <div class="left">
-                        <div class="locality-title">Vasant Kunj</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">Vasant Kunj</p>
+                        </div>
                         <div class="place">368 places</div>
                     </div>
                     <div class="right">
@@ -259,7 +316,9 @@
 
                 <div class="locality hidden flex">
                     <div class="left">
-                        <div class="locality-title">Greater Kailash 1 (GK1)</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">Greater Kailash 1 (GK1)</p>
+                        </div>
                         <div class="place">113 places</div>
                     </div>
                     <div class="right">
@@ -269,7 +328,9 @@
 
                 <div class="locality hidden flex">
                     <div class="left">
-                        <div class="locality-title">Chanakyapuri</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">Chanakyapuri</p>
+                        </div>
                         <div class="place">120 places</div>
                     </div>
                     <div class="right">
@@ -279,7 +340,9 @@
 
                 <div class="locality hidden flex">
                     <div class="left">
-                        <div class="locality-title">Rohini</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">Rohini</p>
+                        </div>
                         <div class="place">1368 places</div>
                     </div>
                     <div class="right">
@@ -289,7 +352,9 @@
 
                 <div class="locality hidden flex">
                     <div class="left">
-                        <div class="locality-title">Janpath</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">Janpath</p>
+                        </div>
                         <div class="place">68 places</div>
                     </div>
                     <div class="right">
@@ -299,7 +364,9 @@
 
                 <div class="locality hidden flex">
                     <div class="left">
-                        <div class="locality-title">Hauz Khas Village</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">Hauz Khas Village</p>
+                        </div>
                         <div class="place">58 places</div>
                     </div>
                     <div class="right">
@@ -309,7 +376,9 @@
 
                 <div class="locality hidden flex">
                     <div class="left">
-                        <div class="locality-title">Sector 38, Noida</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">Sector 38, Noida</p>
+                        </div>
                         <div class="place">94 places</div>
                     </div>
                     <div class="right">
@@ -319,7 +388,9 @@
 
                 <div class="locality hidden flex">
                     <div class="left">
-                        <div class="locality-title">Janakpuri</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">Janakpuri</p>
+                        </div>
                         <div class="place">497 places</div>
                     </div>
                     <div class="right">
@@ -329,7 +400,9 @@
 
                 <div class="locality hidden flex">
                     <div class="left">
-                        <div class="locality-title">Sector 50</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">Sector 50</p>
+                        </div>
                         <div class="place">220 places</div>
                     </div>
                     <div class="right">
@@ -339,7 +412,9 @@
 
                 <div class="locality hidden flex">
                     <div class="left">
-                        <div class="locality-title">Punjabi Bagh</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">Punjabi Bagh</p>
+                        </div>
                         <div class="place">243 places</div>
                     </div>
                     <div class="right">
@@ -349,7 +424,9 @@
 
                 <div class="locality hidden flex">
                     <div class="left">
-                        <div class="locality-title">MG Road</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">MG Road</p>
+                        </div>
                         <div class="place">201 places</div>
                     </div>
                     <div class="right">
@@ -359,7 +436,9 @@
 
                 <div class="locality hidden flex">
                     <div class="left">
-                        <div class="locality-title">DLF Phase 3</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">DLF Phase 3</p>
+                        </div>
                         <div class="place">489 places</div>
                     </div>
                     <div class="right">
@@ -369,7 +448,9 @@
 
                 <div class="locality hidden flex">
                     <div class="left">
-                        <div class="locality-title">Netaji Subhash Place</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">Netaji Subhash Place</p>
+                        </div>
                         <div class="place">144 places</div>
                     </div>
                     <div class="right">
@@ -379,7 +460,9 @@
 
                 <div class="locality hidden flex">
                     <div class="left">
-                        <div class="locality-title">Malviya Nagar</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">Malviya Nagar</p>
+                        </div>
                         <div class="place">409 places</div>
                     </div>
                     <div class="right">
@@ -389,7 +472,9 @@
 
                 <div class="locality hidden flex">
                     <div class="left">
-                        <div class="locality-title">Khan Market</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">Khan Market</p>
+                        </div>
                         <div class="place">58 places</div>
                     </div>
                     <div class="right">
@@ -399,7 +484,9 @@
 
                 <div class="locality hidden flex">
                     <div class="left">
-                        <div class="locality-title">Karol Bagh</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">Karol Bagh</p>
+                        </div>
                         <div class="place">381 places</div>
                     </div>
                     <div class="right">
@@ -409,7 +496,9 @@
 
                 <div class="locality hidden flex">
                     <div class="left">
-                        <div class="locality-title">Nehru Place</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">Nehru Place</p>
+                        </div>
                         <div class="place">112 places</div>
                     </div>
                     <div class="right">
@@ -419,7 +508,9 @@
 
                 <div class="locality hidden flex">
                     <div class="left">
-                        <div class="locality-title">Sohna Road</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">Sohna Road</p>
+                        </div>
                         <div class="place">282 places</div>
                     </div>
                     <div class="right">
@@ -429,7 +520,9 @@
 
                 <div class="locality hidden flex">
                     <div class="left">
-                        <div class="locality-title">Greater Kailash 2 (GK2)</div>
+                        <div class="locality-title">
+                            <p class="text-overflow">Greater Kailash 2 (GK2)</p>
+                        </div>
                         <div class="place">118 places</div>
                     </div>
                     <div class="right">
@@ -447,7 +540,7 @@
         </div>
     </div>
     <!-- GET THE ZOMATO APP -->
-    <div class="zomato-app-container flex">
+    <div class="zomato-app-container flex wrapper">
         <div class="app-image">
             <img src="https://b.zmtcdn.com/data/o2_assets/ce5bc038a8a2d4f8f24465c8826182af1726501431.png"
                 alt="app-image">
@@ -467,7 +560,7 @@
             </div>
             <div class="email-input">
                 <input type="email" placeholder="Email" id="email">
-                <button>Share App Link</button>
+                <button id="shareBtn">Share App Link</button>
             </div>
             <div class="store-section">
                 <p>Download app from</p>
@@ -485,390 +578,10 @@
         </div>
     </div>
     <!-- EXPLORE-OPTIONS -->
-    <div class="explore-options">
-        <div class="heading">Explore options near me</div>
-        <div class="accordions">
-            <div class="accordion">
-                <div class="accordion-container">
-                    <div class="accordion-title">Popular cuisines near me</div>
-                    <i class="fa fa-chevron-down fa-2x"></i>
-                </div>
-                <div class="accordion-data">
-                    <ul>
-                        <li>Bakery near me</li>
-                        <span class="small-circle"></span>
-                        <li>Beverages near me</li>
-                        <span class="small-circle"></span>
-                        <li>Biryani near me</li>
-                        <span class="small-circle"></span>
-                        <li>Burger near me</li>
-                        <span class="small-circle"></span>
-                        <li>Chinese near me</li>
-                        <span class="small-circle"></span>
-                        <li>Continental near me</li>
-                        <span class="small-circle"></span>
-                        <li>Desserts near me</li>
-                        <span class="small-circle"></span>
-                        <li>Italian near me</li>
-                        <span class="small-circle"></span>
-                        <li>Kebab near me</li>
-                        <span class="small-circle"></span>
-                        <li>Mithai near me</li>
-                        <span class="small-circle"></span>
-                        <li>Momos near me</li>
-                        <span class="small-circle"></span>
-                        <li>Mughlai near me</li>
-                        <span class="small-circle"></span>
-                        <li>North Indian near me</li>
-                        <span class="small-circle"></span>
-                        <li>Pasta near me</li>
-                        <span class="small-circle"></span>
-                        <li>Pizza near me</li>
-                        <span class="small-circle"></span>
-                        <li>Rolls near me</li>
-                        <span class="small-circle"></span>
-                        <li>Sandwich near me</li>
-                        <span class="small-circle"></span>
-                        <li>Shake near me</li>
-                        <span class="small-circle"></span>
-                        <li>South Indian near me</li>
-                        <span class="small-circle"></span>
-                        <li>Street near me</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="accordion">
-                <div class="accordion-container">
-                    <div class="accordion-title">
-                        Popular restaurant types near me
-                    </div>
-                    <i class="fa fa-chevron-down fa-2x"></i>
-                </div>
-                <div class="accordion-data">
-                    <ul>
-                        <li>Bakeries near me</li>
-                        <span class="small-circle"></span>
-                        <li>Bars near me</li>
-                        <span class="small-circle"></span>
-                        <li>Beverage Shops near me</li>
-                        <span class="small-circle"></span>
-                        <li>Bhojanalya near me</li>
-                        <span class="small-circle"></span>
-                        <li>Cafés near me</li>
-                        <span class="small-circle"></span>
-                        <li>Casual Dining near me</li>
-                        <span class="small-circle"></span>
-                        <li>Clubs near me</li>
-                        <span class="small-circle"></span>
-                        <li>Cocktail Bars near me</li>
-                        <span class="small-circle"></span>
-                        <li>Confectioneries near me</li>
-                        <span class="small-circle"></span>
-                        <li>Dessert Parlors near me</li>
-                        <span class="small-circle"></span>
-                        <li>Dhabas near me</li>
-                        <span class="small-circle"></span>
-                        <li>Fine Dining near me</li>
-                        <span class="small-circle"></span>
-                        <li>Food Courts near me</li>
-                        <span class="small-circle"></span>
-                        <li>Food Trucks near me</li>
-                        <span class="small-circle"></span>
-                        <li>Irani Cafes near me</li>
-                        <span class="small-circle"></span>
-                        <li>Kiosks near me</li>
-                        <span class="small-circle"></span>
-                        <li>Lounges near me</li>
-                        <span class="small-circle"></span>
-                        <li>Microbreweries near me</li>
-                        <span class="small-circle"></span>
-                        <li>Paan Shop near me</li>
-                        <span class="small-circle"></span>
-                        <li>Quick Bites near me</li>
-                        <span class="small-circle"></span>
-                        <li>Sweet Shops near me</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="accordion">
-                <div class="accordion-container">
-                    <div class="accordion-title">Top restraunt chains</div>
-                    <i class="fa fa-chevron-down fa-2x"></i>
-                </div>
-                <div class="accordion-data order">
-                    <ul>
-                        <li>Domino's</li>
-                        <li>Bikanervala</li>
-                        <li>Biryani Blues</li>
-                        <li>Dunkin' Donuts</li>
-                        <li>BTW</li>
-                        <li>Haldiram's</li>
-                        <li>Burger King</li>
-                        <li>Burger Singh</li>
-                        <li>KFC</li>
-                        <li>Krispy Kreme</li>
-                        <li>McDonald's</li>
-                        <li>Moti Mahal Delux</li>
-                        <li>Om Sweets & Snacks</li>
-                        <li>Pizza Hut</li>
-                        <li>Sagar Ratna</li>
-                        <li>Subway</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="accordion">
-                <div class="accordion-container">
-                    <div class="accordion-title">Cities we deliver to</div>
-                    <i class="fa fa-chevron-down fa-2x"></i>
-                </div>
-                <div class="accordion-data order">
-                    <ul>
-                        <li>Delhi NCR</li>
-                        <li>Kolkata</li>
-                        <li>Mumbai</li>
-                        <li>Bengaluru</li>
-                        <li>Pune</li>
-                        <li>Hyderabad</li>
-                        <li>Chennai</li>
-                        <li>Lucknow</li>
-                        <li>Kochi</li>
-                        <li>Jaipur</li>
-                        <li>Ahmedabad</li>
-                        <li>Chandigarh</li>
-                        <li>Goa</li>
-                        <li>Indore</li>
-                        <li>Gangtok</li>
-                        <li>Nashik</li>
-                        <li>Ooty</li>
-                        <li>Shimla</li>
-                        <li>Ludhiana</li>
-                        <li>Guwahati</li>
-                        <li>Amritsar</li>
-                        <li>Kanpur</li>
-                        <li>Allahabad</li>
-                        <li>Aurangabad</li>
-                        <li>Bhopal</li>
-                        <li>Ranchi</li>
-                        <li>Visakhapatnam</li>
-                        <li>Bhubaneswar</li>
-                        <li>Coimbatore</li>
-                        <li>Mangalore</li>
-                        <li>Vadodara</li>
-                        <li>Nagpur</li>
-                        <li>Agra</li>
-                        <li>Dehradun</li>
-                        <li>Mysore</li>
-                        <li>Puducherry</li>
-                        <li>Surat</li>
-                        <li>Varanasi</li>
-                        <li>Patna</li>
-                        <li>Srinagar</li>
-                        <li>Khajuraho</li>
-                        <li>Neemrana</li>
-                        <li>Cuttack</li>
-                        <li>Haridwar</li>
-                        <li>Leh</li>
-                        <li>Pushkar</li>
-                        <li>Rajkot</li>
-                        <li>Kozhikode</li>
-                        <li>Alappuzha</li>
-                        <li>Thrissur</li>
-                        <li>Manipal</li>
-                        <li>Jodhpur</li>
-                        <li>Kota</li>
-                        <li>Ajmer</li>
-                        <li>Jalandhar</li>
-                        <li>Jammu</li>
-                        <li>Manali</li>
-                        <li>Mussoorie</li>
-                        <li>All delivery cities</li>
-                        <li>Udaipur</li>
-                        <li>Trivandrum</li>
-                        <li>Madurai</li>
-                        <li>Vijayawada</li>
-                        <li>Rishikesh</li>
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- EXPLORE -->
+    <div id="explore-container" class="wrapper"></div>
     <!-- FOOTER -->
-    <footer>
-        <div class="header-footer flex">
-            <div class="header-logo">
-                <img src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png?fit=around|198:42&crop=198:42;*,*
-                " alt="Logo">
-            </div>
-            <div class="language flex">
-                <div class="language-child-first flex" id="firstLanguage">
-                    <div class="nation-flag">
-                        <img src="data:image/jpeg;base64,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"
-                            alt="">
-                    </div>
-                    <p>India</p>
-                    <i class="fa fa-chevron-down fa-2x"></i>
-                    <div class="nation-list hidden flex">
-                        <div class=" nation-item flex">
-                            <div class="nation-flag">
-                                <img src="data:image/jpeg;base64,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"
-                                    alt="">
-                            </div>
-                            <p>India</p>
-                        </div>
-                        <div class="nation-item flex">
-                            <div class="nation-flag ">
-                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_HeOEsGyXjTZwD1XqLhzDJvvZ3ND--jd56g&s"
-                                    alt="">
-                            </div>
-                            <p>Vietnam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="language-child-second flex" id="secondLanguage">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="18" height="18" viewBox="0 0 20 20"
-                        aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 iwHbVQ">
-                        <title>language-globe</title>
-                        <path
-                            d="M10 0c-5.523 0-10 4.477-10 10s4.477 10 10 10c5.523 0 10-4.477 10-10v0c-0.011-5.518-4.482-9.989-9.999-10h-0.001zM17.14 6.18h-3c-0.264-1.393-0.63-2.62-1.107-3.791l0.047 0.131c1.755 0.733 3.161 2.010 4.039 3.618l0.021 0.042zM18.1 10c-0.002 0.676-0.090 1.33-0.252 1.954l0.012-0.054h-3.44c0.059-0.57 0.092-1.231 0.092-1.9s-0.034-1.33-0.099-1.982l0.007 0.082h3.44c0.15 0.57 0.238 1.224 0.24 1.899v0.001zM1.9 10c0.002-0.676 0.090-1.33 0.252-1.954l-0.012 0.054h3.46c-0.059 0.57-0.092 1.231-0.092 1.9s0.034 1.33 0.099 1.982l-0.007-0.082h-3.46c-0.15-0.57-0.238-1.224-0.24-1.899v-0.001zM7.48 8.1h5.040c0.063 0.57 0.099 1.231 0.099 1.9s-0.036 1.33-0.107 1.981l0.007-0.081h-5.040c-0.063-0.57-0.099-1.231-0.099-1.9s0.036-1.33 0.107-1.981l-0.007 0.081zM10.76 1.9c0.603 1.228 1.106 2.657 1.436 4.152l0.024 0.128h-4.44c0.354-1.623 0.857-3.052 1.51-4.395l-0.050 0.115c0.24 0 0.5 0 0.76 0s0.48 0 0.76 0zM6.96 2.48c-0.445 1.051-0.825 2.291-1.079 3.576l-0.021 0.124h-3c0.899-1.65 2.305-2.927 4.007-3.64l0.053-0.020zM2.86 13.8h3c0.262 1.4 0.629 2.634 1.107 3.811l-0.047-0.131c-1.757-0.738-3.165-2.022-4.039-3.637l-0.021-0.043zM9.24 18.1c-0.605-1.234-1.108-2.67-1.437-4.172l-0.023-0.128h4.44c-0.352 1.63-0.855 3.066-1.51 4.415l0.050-0.115c-0.24 0-0.5 0-0.76 0s-0.48 0-0.76 0zM13.040 17.52c0.431-1.046 0.798-2.28 1.041-3.558l0.019-0.122h3.040c-0.902 1.642-2.308 2.912-4.006 3.62l-0.054 0.020z">
-                        </path>
-                    </svg>
-                    <p>English</p>
-                    <i class="fa fa-chevron-down fa-2x"></i>
-                    <div class="language-list hidden">
-                        <div class="language-item">English</div>
-                        <div class="language-item">Türkçe</div>
-                        <div class="language-item">हिंदी</div>
-                        <div class="language-item">Português (BR)</div>
-                        <div class="language-item">Indonesian</div>
-                        <div class="language-item">Português (PT)</div>
-                        <div class="language-item">Čeština</div>
-                        <div class="language-item">Slovenčina</div>
-                        <div class="language-item">Polish</div>
-                        <div class="language-item">Italian</div>
-                        <div class="language-item">Vietnamese</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="content-navlink flex">
-            <div class="sub-nav">
-                <h4>ABOUT ZOMATO</h4>
-                <ul id="about flex">
-                    <li><a href="#">Who We Are</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Work With Us</a></li>
-                    <li><a href="#">Investor Relations</a></li>
-                    <li><a href="#">Report Fraud</a></li>
-                    <li><a href="#">Press Kit</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="sub-nav">
-                <h4>ZOMAVERSE</h4>
-                <ul id="romaverse flex">
-                    <li><a href="#">Zomato</a></li>
-                    <li><a href="#">Blinkit</a></li>
-                    <li><a href="#">District</a></li>
-                    <li><a href="#">Feeding India</a></li>
-                    <li><a href="#">Hyperpure</a></li>
-                    <li><a href="#">Zomato Live</a></li>
-                    <li><a href="#">Zomaland</a></li>
-                    <li><a href="#">Weather Union</a></li>
-                </ul>
-            </div>
-            <div class="sub-nav">
-                <h4>FOR RESTAURANTS</h4>
-                <ul id="restaurans">
-                    <li><a href="#">Partner With Us</a></li>
-                    <li><a href="#">Apps For You</a></li>
-                </ul>
-            </div>
-            <div class="sub-nav">
-                <h4>LEARN MORE</h4>
-                <ul id="learn-more">
-                    <li><a href="#">Privacy</a></li>
-                    <li><a href="#">Security</a></li>
-                    <li><a href="#">Terms</a></li>
-                </ul>
-            </div>
-            <div class="sub-nav">
-                <h4>SOCIAL LINKS</h4>
-                <div class="social-nav flex">
-                    <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="22" height="22"
-                            viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
-                            class="sc-rbbb40-0 cvuzKA">
-                            <path
-                                d="M0 10C0 4.5 4.5 0 10 0C15.5 0 20 4.5 20 10C20 15.5 15.5 20 10 20C4.5 20 0 15.5 0 10ZM7.0625 8.375H4.75V15.4375H7.0625V8.375ZM7.25 6.1875C7.25 5.5 6.75 5 5.9375 5C5.125 5 4.5625 5.5 4.5625 6.1875C4.5625 6.875 5.0625 7.4375 5.875 7.4375C6.6875 7.4375 7.25 6.875 7.25 6.1875ZM15.5 11.375C15.5 9.1875 14.3125 8.1875 12.8125 8.1875C11.5625 8.1875 11 8.875 10.6875 9.375V8.375H8.375C8.375 9.0625 8.375 15.4375 8.375 15.4375H10.6875V11.5C10.6875 11.3125 10.6875 11.0625 10.75 10.9375C10.9375 10.5 11.3125 10.0625 11.9375 10.0625C12.75 10.0625 13.125 10.6875 13.125 11.6875V15.4375H15.4375C15.5 15.4375 15.5 11.375 15.5 11.375Z">
-                            </path>
-                        </svg>
-                    </a>
-                    <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="22" height="22"
-                            viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
-                            class="sc-rbbb40-0 cvuzKA">
-                            <path
-                                d="M0 10C0 4.5 4.5 0 10 0C15.5 0 20 4.5 20 10C20 15.5 15.5 20 10 20C4.5 20 0 15.5 0 10ZM10.1875 5C8.8125 5 8.625 5 8.0625 5C7.5 5.0625 7.125 5.125 6.8125 5.25C6.5 5.375 6.1875 5.5625 5.875 5.875C5.5625 6.1875 5.375 6.4375 5.25 6.8125C5.125 7.125 5 7.5 5 8.0625C5 8.625 5 8.75 5 10.1875C5 11.625 5 11.8125 5.0625 12.375C5.0625 12.9375 5.1875 13.3125 5.3125 13.625C5.4375 13.9375 5.625 14.25 5.9375 14.5625C6.1875 14.8125 6.5 15 6.875 15.1875C7.1875 15.3125 7.5625 15.4375 8.125 15.4375C8.6875 15.4375 8.875 15.5 10.25 15.5C11.6875 15.5 11.875 15.5 12.4375 15.4375C13 15.375 13.375 15.3125 13.6875 15.1875C14 15.0625 14.3125 14.875 14.625 14.5625C14.9375 14.25 15.125 14 15.25 13.625C15.375 13.3125 15.5 12.875 15.5 12.375C15.5625 11.8125 15.5625 11.625 15.5625 10.1875C15.5625 8.75 15.5625 8.625 15.5 8.0625C15.5 7.5 15.375 7.125 15.25 6.8125C15.125 6.4375 14.9375 6.1875 14.625 5.875C14.375 5.625 14.0625 5.4375 13.6875 5.25C13.375 5.125 12.9375 5.0625 12.4375 5C11.8125 5 11.625 5 10.1875 5ZM9.75 5.9375C9.875 5.9375 10.0625 5.9375 10.1875 5.9375C11.5625 5.9375 11.75 5.9375 12.3125 5.9375C12.8125 5.9375 13.0625 6.0625 13.25 6.125C13.5 6.25 13.6875 6.375 13.875 6.5C14.0625 6.625 14.1875 6.8125 14.25 7.125C14.3125 7.3125 14.4375 7.5625 14.4375 8.0625C14.5 8.625 14.5 8.8125 14.5 10.1875C14.5 11.5625 14.5 11.75 14.4375 12.3125C14.4375 12.8125 14.3125 13.125 14.25 13.3125C14.1875 13.5625 14.0625 13.6875 13.875 13.9375C13.6875 14.125 13.5 14.1875 13.25 14.3125C13.0625 14.375 12.8125 14.5 12.3125 14.5C11.75 14.5 11.5625 14.5625 10.1875 14.5625C8.8125 14.5625 8.625 14.5625 8.0625 14.5C7.5625 14.5 7.3125 14.375 7.125 14.3125C6.875 14.1875 6.6875 14.125 6.5 13.9375C6.3125 13.75 6.1875 13.5625 6.125 13.3125C6.0625 13.125 6 12.875 5.9375 12.3125C5.9375 11.75 5.9375 11.625 5.9375 10.1875C5.9375 8.8125 5.9375 8.625 5.9375 8.0625C6 7.5625 6.0625 7.3125 6.125 7.125C6.25 6.875 6.375 6.6875 6.5 6.5C6.625 6.3125 6.875 6.1875 7.125 6.125C7.3125 6.0625 7.5625 5.9375 8.0625 5.9375C8.5625 5.9375 8.75 5.9375 9.75 5.9375ZM13 6.8125C12.6875 6.8125 12.375 7.0625 12.375 7.4375C12.375 7.8125 12.625 8.0625 13 8.0625C13.375 8.0625 13.625 7.8125 13.625 7.4375C13.625 7.0625 13.3125 6.8125 13 6.8125ZM10.1875 7.5C8.75 7.5 7.5 8.6875 7.5 10.1875C7.5 11.6875 8.6875 12.875 10.1875 12.875C11.6875 12.875 12.875 11.6875 12.875 10.1875C12.875 8.6875 11.6875 7.5 10.1875 7.5ZM10.1875 8.4375C11.125 8.4375 11.9375 9.1875 11.9375 10.1875C11.9375 11.1875 11.1875 11.9375 10.1875 11.9375C9.25 11.9375 8.4375 11.1875 8.4375 10.1875C8.4375 9.1875 9.25 8.4375 10.1875 8.4375Z">
-                            </path>
-                        </svg>
-                    </a>
-                    <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="22" height="22"
-                            viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
-                            class="sc-rbbb40-0 cvuzKA">
-                            <title>twitter-circle</title><svg xmlns="http://www.w3.org/2000/svg"
-                                shape-rendering="geometricPrecision" text-rendering="geometricPrecision"
-                                image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
-                                viewBox="0 0 512 512">
-                                <path
-                                    d="M256 0c141.385 0 256 114.615 256 256S397.385 512 256 512 0 397.385 0 256 114.615 0 256 0z">
-                                </path>
-                                <path fill="#fff" fill-rule="nonzero"
-                                    d="M318.64 157.549h33.401l-72.973 83.407 85.85 113.495h-67.222l-52.647-68.836-60.242 68.836h-33.423l78.052-89.212-82.354-107.69h68.924l47.59 62.917 55.044-62.917zm-11.724 176.908h18.51L205.95 176.493h-19.86l120.826 157.964z">
-                                </path>
-                            </svg>
-                        </svg>
-                    </a>
-                    <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="#1C1C1C" width="22" height="22"
-                            viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
-                            class="sc-rbbb40-0 cvuzKA">
-                            <path
-                                d="M0 10C0 4.5 4.5 0 10 0C15.5 0 20 4.5 20 10C20 15.5 15.5 20 10 20C4.5 20 0 15.5 0 10ZM15.1875 7.4375C15.0625 7 14.6875 6.625 14.25 6.5C13.4375 6.25 10.1875 6.25 10.1875 6.25C10.1875 6.25 6.9375 6.25 6.125 6.5C5.6875 6.625 5.3125 7 5.1875 7.4375C5 8.25 5 10 5 10C5 10 5 11.75 5.25 12.5625C5.375 13 5.75 13.375 6.1875 13.5C7 13.75 10.25 13.75 10.25 13.75C10.25 13.75 13.5 13.75 14.3125 13.5C14.75 13.375 15.125 13 15.25 12.5625C15.5 11.75 15.5 10 15.5 10C15.5 10 15.4375 8.25 15.1875 7.4375ZM9.25 11.75V8.5L11.875 10.125L9.25 11.75Z">
-                            </path>
-                        </svg>
-                    </a>
-                    <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            aria-label="Facebook">
-                            <path
-                                d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z" />
-                        </svg>
-                    </a>
-                </div>
-                <div class="download-buttons flex">
-                    <div class="download">
-                        <img src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png"
-                            alt="google-play">
-                    </div>
-                    <div class="download">
-                        <img src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png"
-                            alt="apple-store">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <p id="last-child">By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy
-            Policy and Content
-            Policies. All trademarks are properties of their respective owners. 2008-2025 © Zomato™ Ltd. All rights
-            reserved.
-        </p>
-    </footer>
+    <div id="footer" class="background-wrapper-footer"></div>
     <script src="./index.js"></script>
 </body>
 

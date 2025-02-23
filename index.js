@@ -1,3 +1,23 @@
+//LOAD COMPONENTS
+document.addEventListener('DOMContentLoaded', function () {
+    fetch('../../components/explore-options-near-me/index.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('explore-container').innerHTML = data;
+            const exploreScript = document.createElement('script');
+            exploreScript.src = '../../components/explore-options-near-me/script.js';
+            document.body.appendChild(exploreScript);
+        });
+    fetch('../../components/footer/index.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+            const footerScript = document.createElement('script');
+            footerScript.src = '../../components/footer/script.js';
+            document.body.appendChild(footerScript);
+        });
+})
+
 // HEADER
 const inputLocation = document.querySelector('.input-location');
 const detectLocation = document.querySelector('.detect-location');
@@ -8,60 +28,21 @@ inputLocation.addEventListener('click', (e) => {
 
     if (currIcon.className === 'fa-solid fa-caret-down') {
         currIcon.className = 'fa-solid fa-caret-up';
-        arrowDown.style.transform = 'translateY(3px)';
+        arrowDown.style.transform = 'translateY(-10px)';
     } else {
         currIcon.className = 'fa-solid fa-caret-down';
-        arrowDown.style.transform = 'translateY(0)';
+        arrowDown.style.transform = 'translateY(-10px)';
     }
-    detectLocation.style.display = 'block';
+    detectLocation.style.display = detectLocation.style.display === 'block'
+        ? 'none'
+        : 'block';
+
 });
 document.addEventListener('click', () => {
     detectLocation.style.display = 'none';
-
 });
 
-//HIGHLIGHT-CARDS
-const highlightCards = [
-    {
-        id: 1,
-        image: "https://b.zmtcdn.com/webFrontend/e5b8785c257af2a7f354f1addaf37e4e1647364814.jpeg?output-format=webp",
-        title: "Order Online",
-        description: "Stay home and order to your doorstep",
-    },
-    {
-        id: 2,
-        image: "https://b.zmtcdn.com/webFrontend/d026b357feb0d63c997549f6398da8cc1647364915.jpeg?output-format=webp",
-        title: "Dining",
-        description: "View the city's favourite dining venues",
-    },
-    {
-        id: 3,
-        image: "https://b.zmtcdn.com/data/o2_assets/371de657644f1b5818fcb5d83387c8c91722851940.png?output-format=webp",
-        title: "Life Event",
-        description: "Explore the city's top nightlife outlets",
-    },
-];
 
-function renderHighlightCards(highlightCards) {
-    const highlightCardContainer = document.querySelector('.highlight-cards');
-    highlightCards.forEach((card) => {
-        const cardElement = document.createElement('div');
-        cardElement.classList.add('highlight-card');
-
-        cardElement.innerHTML = `
-            <div class="img">
-                <img src="${card.image}" alt="${card.title}" />
-            </div>
-            <div class="content">
-                <h4>${card.title}</h4>
-                <p>${card.description}</p>
-            </div>
-        `;
-        highlightCardContainer.appendChild(cardElement);
-    });
-}
-
-renderHighlightCards(highlightCards);
 
 //SEE MORE SEE LESS
 document.addEventListener('DOMContentLoaded', () => {
@@ -135,7 +116,6 @@ phoneButton.addEventListener("click", function () {
         countryList.classList.toggle("hidden");
     });
 
-    // Handle country selection
     countryList.addEventListener("click", function (e) {
         if (e.target.classList.contains("country-item")) {
             phoneInput.value = e.target.textContent;
@@ -143,7 +123,6 @@ phoneButton.addEventListener("click", function () {
         }
     });
 
-    // Close dropdown when clicking outside
     document.addEventListener("click", function (e) {
         if (!phoneCode.contains(e.target)) {
             countryList.classList.add("hidden");
@@ -159,67 +138,224 @@ emailButton.addEventListener("click", function () {
     `;
 })
 
-//EXPLORE OPTION NEAR ME
-const accordion_containers = document.querySelectorAll(".accordion-container");
-accordion_containers.forEach((accordion_container) => {
-    accordion_container.addEventListener("click", function () {
-        const data = this.nextElementSibling; // get data
-        data.classList.toggle("show");
-        const icon = this.querySelector("i");
-        icon.classList.toggle("animate");
+//Change share button
+function updateBtnText() {
+    let button = document.getElementById('shareBtn');
+    if (window.matchMedia("( max-width: 880px)").matches) {
+        button.textContent = "Share";
+    } else {
+        button.textContent = "Share App Link";
+    }
+}
+
+updateBtnText();
+window.matchMedia("(max-width: 880px)").addEventListener("change", updateBtnText);
+
+function overflowText() {
+    let text = document.getElementsByClassName('locality-title');
+    if (window.matchMedia("(max-width: 1024px)").matches) {
+
+    }
+}
+
+
+//LOGIN-SIGNUP OVERLAY
+const loginBtn = document.querySelector('#login-btn');
+const signupBtn = document.querySelector('#signup-btn');
+
+const loginOverlay = document.createElement('div');
+const signupOverlay = document.createElement('div');
+loginOverlay.className = 'login-overlay hidden';
+signupOverlay.className = 'signup-overlay hidden';
+
+loginOverlay.innerHTML = `
+    <div class="login-container">
+        <div class="close-button">
+            <i class="fa-solid fa-times"></i>
+        </div>
+        <h1>Login</h1>
+        <div class="phone-input">
+            <div class="phone-code">
+                <input type="text" placeholder="+91" readonly>
+                <div class="arrow-down">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+            <div class="country-list hidden">
+            <div class="country-item">
+                <img src="https://b.zmtcdn.com/images/flags_z10/in.png" width="30" height="20">+84
+            </div>
+            <div class="country-item">
+                <img src="https://b.zmtcdn.com/images/flags_z10/af.png" width="30" height="20">+86
+            </div>
+            <div class="country-item">
+                <img src="https://b.zmtcdn.com/images/flags_z10/al.png" width="30" height="20">+32
+            </div>
+            <div class="country-item">
+                <img src="https://b.zmtcdn.com/images/flags_z10/dz.png" width="30" height="20">+91
+            </div>
+            <div class="country-item">
+                <img src="https://b.zmtcdn.com/images/flags_z10/as.png" width="30" height="20">+60
+            </div>
+            <div class="country-item">
+                <img src="https://b.zmtcdn.com/images/flags_z10/ad.png" width="30" height="20">+63
+            </div>
+            <div class="country-item">
+                <img src="https://b.zmtcdn.com/images/flags_z10/at.png" width="30" height="20">+94
+            </div>
+            <div class="country-item">
+                <img src="https://b.zmtcdn.com/images/flags_z10/it.png" width="30" height="20">+50
+            </div>
+        </div>
+            <div class="type-container">
+                <input type="text" placeholder="Phone">
+            </div>
+        </div>
+        <button class="otp-button">Send One Time Password</button>
+        <div class="or">
+            <hr>
+            <span id="content-or">or</span>
+            <hr>
+        </div>
+        <button id="email-button">
+            <i class="fa-regular fa-envelope"></i>
+            Continue with Email
+        </button>
+        <button id="google-button">
+            <i class="fa-brands fa-google"></i>
+            Continue with Google
+        </button>
+        <hr class="footer-line">
+        <p class="footer-content">
+            New to Zomato? <a href="#" id="create-account">Create account</a>
+        </p>
+    </div>
+`;
+
+signupOverlay.innerHTML = `
+    <div class="signup-container">
+        <div class="close-button">
+            <i class="fa-solid fa-times"></i>
+        </div>
+        <h1>Sign up</h1>
+        <div class="sign-input">
+            <div class="input-name">
+                <input type="text" width="100%" id="nameInput" placeholder=" " required>
+                <label for="nameInput">Full Name</label>
+            </div>
+            <div class="input-email">
+                <input type="email" width="100%" id="emailInput" placeholder=" " required>
+                <label for="emailInput">Email</label>
+            </div>
+            <div class="check-box">
+
+                <span>
+                    <input type="checkbox">
+                    "I agree to Zomato's "
+                    <a href="./conditions" class="">Term of Service</a> ", "
+                    <a href="./privacy" class="">Chính sách bảo mật</a> "and "
+                    <a href="./policies" class="">Content Policies</a>
+                </span>
+            </div>
+        </div>
+        <button class="otp-button">Send One Time Password</button>
+        <div class="or">
+            <hr>
+            <span id="content-or">or</span>
+            <hr>
+        </div>
+        <button id="google-button">
+            <i class="fa-brands fa-google"></i>
+            Continue with Google
+        </button>
+        <hr class="footer-line">
+        <p class="footer-content">
+            Already have an account? <a href="#" id="create-account">Log in</a>
+        </p>
+    </div>
+`;
+
+loginBtn.addEventListener("click", function () {
+    loginOverlay.classList.toggle('hidden');
+    document.body.appendChild(loginOverlay);
+
+    const backdrop = document.createElement('div');
+    backdrop.className = 'overlay hidden';
+    backdrop.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 998;';
+    document.body.appendChild(backdrop);
+    backdrop.classList.toggle('hidden');
+
+    backdrop.addEventListener('click', function () {
+        loginOverlay.classList.add('hidden');
+        backdrop.remove();
     });
-});
 
-// FOOTER
-const firstLanguageSelect = document.querySelector("#firstLanguage");
-const secondLanguageSelect = document.querySelector("#secondLanguage");
+    const closeLogin = () => {
+        loginOverlay.classList.add('hidden');
+        backdrop.remove();
+    };
 
-firstLanguageSelect.addEventListener("click", function () {
-    const nationList = document.querySelector(".nation-list");
-    nationList.style.display = "flex";
+    const closeButton = loginOverlay.querySelector('.close-button');
+    if (closeButton) {
+        closeButton.addEventListener('click', closeLogin);
+    }
 })
 
-secondLanguageSelect.addEventListener("click", function () {
-    const languageList = document.querySelector(".language-list");
-    languageList.style.display = "block";
+signupBtn.addEventListener("click", function () {
+    signupOverlay.classList.toggle('hidden');
+    document.body.appendChild(signupOverlay);
+
+    const backdrop = document.createElement('div');
+    backdrop.className = 'overlay hidden';
+    backdrop.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 998;';
+    document.body.appendChild(backdrop);
+    backdrop.classList.toggle('hidden');
+
+    backdrop.addEventListener('click', function () {
+        signupOverlay.classList.add('hidden');
+        backdrop.remove();
+    });
+    const closeSignup = () => {
+        signupOverlay.classList.add('hidden');
+        backdrop.remove();
+    };
+    const closeButton = signupOverlay.querySelector('.close-button');
+    if (closeButton) {
+        closeButton.addEventListener('click', closeSignup);
+    }
 })
 
-const nationItems = document.querySelectorAll(".nation-item");
-const selectedNation = document.querySelector("#firstLanguage p");
-const selectedNationFlag = document.querySelector("#firstLanguage .nation-flag img");
+const initPhoneCodeSelection = () => {
+    const phoneCode = loginOverlay.querySelector(".phone-code");
+    const countryList = loginOverlay.querySelector(".country-list");
+    const phoneInput = phoneCode.querySelector("input");
+    const countryItems = loginOverlay.querySelectorAll(".country-item");
+    const phoneNumberInput = loginOverlay.querySelector(".type-container input");
 
-nationItems.forEach(item => {
-    item.addEventListener("click", function () {
-        const nationText = this.querySelector("p").textContent;
-        selectedNation.textContent = nationText;
-        const newFlagSrc = this.querySelector(".nation-flag img").src;
-        selectedNationFlag.src = newFlagSrc;
-        const nationList = document.querySelector(".nation-list");
-        nationList.style.display = "none";
+    phoneCode.addEventListener("click", (e) => {
+        e.stopPropagation();
+        countryList.classList.toggle("hidden");
     });
-});
 
-const languageItems = document.querySelectorAll(".language-item");
-const selectedLanguage = document.querySelector("#secondLanguage p");
-languageItems.forEach(item => {
-    item.addEventListener("click", function () {
-        selectedLanguage.textContent = this.textContent;
-        const languageList = document.querySelector(".language-list");
-        languageList.style.display = "none";
+    countryItems.forEach(item => {
+        item.addEventListener("click", () => {
+            const code = item.textContent.trim();
+            phoneInput.value = code;
+
+            countryList.classList.add("hidden");
+        });
     });
-});
 
-document.addEventListener("click", function (e) {
-    const languageList = document.querySelector(".language-list");
-    const secondLanguageSelect = document.querySelector("#secondLanguage");
-    const nationList = document.querySelector(".nation-list");
-    const firstLanguageSelect = document.querySelector("#firstLanguage");
+    document.addEventListener("click", () => {
+        countryList.classList.add("hidden");
+    });
 
-    if (!languageList.contains(e.target) && !secondLanguageSelect.contains(e.target)) {
-        languageList.style.display = "none";
-    }
+    phoneNumberInput.addEventListener("input", (e) => {
+        e.target.value = e.target.value.replace(/[^0-9]/g, '');
 
-    if (!nationList.contains(e.target) && !firstLanguageSelect.contains(e.target)) {
-        nationList.style.display = "none";
-    }
-});
+        if (e.target.value.length > 15) {
+            e.target.value = e.target.value.slice(0, 15);
+        }
+    });
+};
+const phoneCodeHandler = initPhoneCodeSelection();
