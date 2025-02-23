@@ -1,164 +1,3 @@
-//LOAD COMPONENTS
-document.addEventListener('DOMContentLoaded', function () {
-    fetch('./components/explore-options-near-me/index.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('explore-container').innerHTML = data;
-            const exploreScript = document.createElement('script');
-            exploreScript.src = './components/explore-options-near-me/script.js';
-            document.body.appendChild(exploreScript);
-        });
-    fetch('./components/footer/index.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer').innerHTML = data;
-            const footerScript = document.createElement('script');
-            footerScript.src = './components/footer/script.js';
-            document.body.appendChild(footerScript);
-        });
-})
-
-// HEADER
-const inputLocation = document.querySelector('.input-location');
-const detectLocation = document.querySelector('.detect-location');
-inputLocation.addEventListener('click', (e) => {
-    e.stopPropagation(); // Ngăn chặn sự kiện click lan truyền
-    const arrowDown = inputLocation.querySelector('.arrow-down');
-    const currIcon = arrowDown.querySelector('i');
-
-    if (currIcon.className === 'fa-solid fa-caret-down') {
-        currIcon.className = 'fa-solid fa-caret-up';
-        arrowDown.style.transform = 'translateY(-10px)';
-    } else {
-        currIcon.className = 'fa-solid fa-caret-down';
-        arrowDown.style.transform = 'translateY(-10px)';
-    }
-    detectLocation.style.display = detectLocation.style.display === 'flex'
-        ? 'none'
-        : 'flex';
-
-});
-document.addEventListener('click', () => {
-    detectLocation.style.display = 'none';
-});
-
-
-
-//SEE MORE SEE LESS
-document.addEventListener('DOMContentLoaded', () => {
-    const toggleButton = document.querySelector(".center");
-    const hiddenItems = document.querySelectorAll(".hidden");
-
-    toggleButton.addEventListener("click", () => {
-        const isHidden = hiddenItems[0].classList.contains("hidden");
-        console.log("Toggle clicked, isHidden:", isHidden);
-
-        hiddenItems.forEach(item => {
-            if (isHidden) {
-                item.classList.remove("hidden");
-            } else {
-                item.classList.add("hidden");
-            }
-        });
-
-
-        toggleButton.innerHTML = isHidden ?
-            `See less <i class="fa-solid fa-chevron-up"></i>` :
-            `See more <i class="fa-solid fa-chevron-down"></i>`;
-    });
-});
-
-//EMAIL PHONE
-const emailButton = document.querySelector("#email");
-const phoneButton = document.querySelector("#phone");
-const emailInput = document.querySelector(".email-input");
-
-
-phoneButton.addEventListener("click", function () {
-    emailInput.innerHTML = ``;
-    emailInput.innerHTML = `
-        <div class="phone-input">
-            <div class="phone-code">
-                <input type="text" placeholder="+91" readonly>
-                <div class="arrow-down">
-                    <i class="fa-solid fa-chevron-down"></i>
-                </div>
-            </div>
-            <div class="country-list hidden">
-                    <div class="country-item">+84</div>
-                    <div class="country-item">+1</div>
-                    <div class="country-item">+32</div>
-                    <div class="country-item">+91</div>
-                    <div class="country-item">+60</div>
-                    <div class="country-item">+63</div>
-                    <div class="country-item">+94</div>
-                    <div class="country-item">+50</div>
-                    <div class="country-item">+50</div>
-                    <div class="country-item">+50</div>
-                    <div class="country-item">+50</div>
-                    <div class="country-item">+50</div>
-                    <div class="country-item">+50</div>
-                    <div class="country-item">+50</div>
-                    <div class="country-item">+50</div>
-                    <div class="country-item">+50</div>
-                    </div>
-            <div class="type-container">
-                <input type="text" placeholder="type here...">
-            </div>
-        </div>
-        <button>Share App Link</button>
-    `;
-    const phoneCode = emailInput.querySelector(".phone-code");
-    const countryList = emailInput.querySelector(".country-list");
-    const phoneInput = phoneCode.querySelector("input");
-
-    phoneCode.addEventListener("click", function () {
-        countryList.classList.toggle("hidden");
-    });
-
-    countryList.addEventListener("click", function (e) {
-        if (e.target.classList.contains("country-item")) {
-            phoneInput.value = e.target.textContent;
-            countryList.classList.add("hidden");
-        }
-    });
-
-    document.addEventListener("click", function (e) {
-        if (!phoneCode.contains(e.target)) {
-            countryList.classList.add("hidden");
-        }
-    });
-})
-
-emailButton.addEventListener("click", function () {
-    emailInput.innerHTML = '';
-    emailInput.innerHTML = `
-        <input type = "email" placeholder = "Email" id = "email" >
-        <button>Share App Link</button>
-    `;
-})
-
-//Change share button
-function updateBtnText() {
-    let button = document.getElementById('shareBtn');
-    if (window.matchMedia("( max-width: 880px)").matches) {
-        button.textContent = "Share";
-    } else {
-        button.textContent = "Share App Link";
-    }
-}
-
-updateBtnText();
-window.matchMedia("(max-width: 880px)").addEventListener("change", updateBtnText);
-
-function overflowText() {
-    let text = document.getElementsByClassName('locality-title');
-    if (window.matchMedia("(max-width: 1024px)").matches) {
-
-    }
-}
-
-
 //LOGIN-SIGNUP OVERLAY
 const loginBtn = document.querySelector('#login-btn');
 const signupBtn = document.querySelector('#signup-btn');
@@ -325,6 +164,73 @@ signupBtn.addEventListener("click", function () {
     }
 })
 
+
+// HEADER
+const inputLocation = document.querySelector('.input-location');
+const detectLocation = document.querySelector('.detect-location');
+
+inputLocation.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const arrowDown = inputLocation.querySelector('.arrow-down');
+    const currIcon = arrowDown.querySelector('i');
+
+    if (currIcon.className === 'fa-solid fa-caret-down') {
+        currIcon.className = 'fa-solid fa-caret-up';
+        arrowDown.style.transform = 'translateY(-10px)';
+        detectLocation.style.display = 'flex';
+    } else {
+        currIcon.className = 'fa-solid fa-caret-down';
+        arrowDown.style.transform = 'translateY(-12px)';
+    }
+});
+
+detectLocation.addEventListener('click', (e) => {
+    e.stopPropagation();
+});
+
+document.addEventListener('click', (e) => {
+    if (!inputLocation.contains(e.target) && !detectLocation.contains(e.target)) {
+        detectLocation.style.display = 'none';
+        const arrowDown = inputLocation.querySelector('.arrow-down');
+        const currIcon = arrowDown.querySelector('i');
+        currIcon.className = 'fa-solid fa-caret-down';
+        arrowDown.style.transform = 'translateY(-13px)';
+    }
+});
+
+// 
+const menuIcon = document.querySelector('.menu-icon');
+const menuOverlay = document.createElement('div');
+menuOverlay.className = 'menu-overlay hidden';
+
+menuOverlay.innerHTML = `
+    <div class="menu-container">
+        <ul>
+            <li class="menu-item" id="menu-login"><a>Log in</a></li>
+        </ul>
+        <ul>
+            <li class="menu-item" id="menu-signup"><a>Sign up</a></li>
+        </ul>
+    </div>
+`;
+
+menuIcon.addEventListener('click', function () {
+    menuOverlay.classList.toggle('hidden');
+    document.body.appendChild(menuOverlay);
+
+    const menuLogin = menuOverlay.querySelector('#menu-login');
+    const menuSignup = menuOverlay.querySelector('#menu-signup');
+
+    menuLogin.addEventListener('click', function () {
+        menuOverlay.classList.add('hidden');
+        loginBtn.click();
+    });
+
+    menuSignup.addEventListener('click', function () {
+        menuOverlay.classList.add('hidden');
+        signupBtn.click();
+    });
+});
 const initPhoneCodeSelection = () => {
     const phoneCode = loginOverlay.querySelector(".phone-code");
     const countryList = loginOverlay.querySelector(".country-list");
