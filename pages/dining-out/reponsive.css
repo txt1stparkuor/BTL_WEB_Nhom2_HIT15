@@ -1,0 +1,58 @@
+@import url("../../assests/css/variable/foodAndRestaurant.css");
+@media (width <= 768px) {
+  :root {
+    --fs--base: 0.9375rem;
+    --fs-medium-large: 1rem;
+  }
+  main .filter {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+  }
+  .restaurants {
+    gap: 1rem;
+  }
+  .collections {
+    position: relative;
+  }
+  .collections h1 {
+    font-size: 1.25rem;
+    padding-bottom: 0;
+  }
+  .collections .description-wrap {
+    font-size: var(--fs--base);
+  }
+  .container .swiper-navigation {
+    display: none;
+  }
+  .swiper-wrapper .slider__card {
+    max-width: 200px;
+  }
+  .end-of-search {
+    font-size: 1rem;
+    padding: 10vh 5vw 20vh;
+  }
+  .end-of-search .img-wrap {
+    max-width: 70px;
+  }
+}
+@media (width <= 576px) {
+  .collections .description-wrap a {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.75rem;
+  }
+  .end-of-search {
+    font-size: 1rem;
+    justify-content: center;
+    gap: 0.25rem;
+  }
+  .end-of-search .img-wrap {
+    max-width: 70px;
+  }
+  .selection-navbar .img-wrap {
+    width: 50px;
+    height: 50px;
+  }
+}

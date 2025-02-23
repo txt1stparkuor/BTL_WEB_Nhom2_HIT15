@@ -1,0 +1,22 @@
+@import url(../fonts.css);
+:root {
+    --primary-white: rgb(255, 255, 255); /* Very commonly used for text, and backgrounds*/
+    --brand-primary: rgb(239, 79, 95);  /* Main brand color for active states and highlights */
+    --light-background: rgb(248, 248, 248); /* Light grey background for some elements*/
+    --border-default: rgb(207, 207, 207);  /* Default gray for borders and some text */
+    --text-default: rgb(105, 105, 105); /* Default text color mostly navbars */
+    --text-color1: rgb(28, 28, 28);  
+    --fs--small: 0.75rem;       /*  used for header home page text */
+    --fs--medium-large: 1.25rem; /* used for selection navbar links */
+    --fs--base: 1rem;          /* used for general text, description links, name and rating text */
+    --fs--small-medium: 0.875rem; /* used for filter buttons, discount text, info container text */
+
+    --text-color: #fff;
+    --icon-primary-color: #fe7784;
+    --icon-secondary-color: #a19f9f;
+    --icon-tertiary-color: #4d4d4d;
+    --border-primary-color: #b3b2b2;
+    --border-secondary-color: #e8e8e8;
+    --fill-button-primary: #e03546;
+    --fill-button-secondary: #e15563;
+}

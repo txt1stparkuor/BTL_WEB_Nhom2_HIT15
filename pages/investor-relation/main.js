@@ -19,3 +19,15 @@ document.addEventListener('scroll', function () {
         img.src = "https://b.zmtcdn.com/data/o2_assets/d1c6eed080cb5705f0a6112566312bc21684137946.png";
     }
 })
+
+document.addEventListener('DOMContentLoaded', function () {
+    fetch('../../components/footer/index.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+            const footerScript = document.createElement('script');
+            footerScript.src = '../../components/footer/script.js';
+            document.body.appendChild(footerScript);
+        });
+})
+
