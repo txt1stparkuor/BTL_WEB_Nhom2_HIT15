@@ -119,9 +119,7 @@ h5 {
 /* GRID FOOT CONTAINER */
 .handpicked {
     display: grid;
-    /* grid-template-columns: repeat(4, 1fr); */
-    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
-
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     gap: 1.2em;
 }
 
@@ -323,4 +321,9 @@ h5 {
     margin-top: auto;
     position: relative;
     bottom: 0;
+}
+
+footer i {
+    font-size: 1.2em;
+    margin: 0 .3em;
 }

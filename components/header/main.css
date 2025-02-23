@@ -30,7 +30,7 @@ header {
 
 #position,
 .detect-location i {
-    color: rgb(255, 126, 139);
+    color: var(--fill-button-secondary);
 }
 
 #position,
