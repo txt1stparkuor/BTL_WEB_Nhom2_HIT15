@@ -51,8 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     toggleButton.addEventListener("click", () => {
         const isHidden = hiddenItems[0].classList.contains("hidden");
-        console.log("Toggle clicked, isHidden:", isHidden);
-
         hiddenItems.forEach(item => {
             if (isHidden) {
                 item.classList.remove("hidden");
