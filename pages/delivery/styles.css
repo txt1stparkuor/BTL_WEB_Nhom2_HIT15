@@ -212,3 +212,7 @@ main .brands-container .brand .brand-time {
   font-weight: 500;
   font-size: var(--fs--small);
 }
+footer i {
+  font-size: 1.2em;
+  margin: 0 .3em;
+}

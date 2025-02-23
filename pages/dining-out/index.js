@@ -20,7 +20,7 @@ function applyFiltersAndSorting() {
   }
 
   if (activeFilters.sortByRatingHighToLow) {
-    filteredData = filteredData.sort((a, b) => {
+    filteredData = filteredData.sort((a, b) => { 
       const ratingA =
         typeof a.rating === "number" ? a.rating : a.rating === "New" ? 0 : -1;
       const ratingB =
@@ -180,8 +180,7 @@ async function loadMainTemplate() {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const html = await response.text();
-    const firstScriptTag = document.querySelector("body script");
-    firstScriptTag.insertAdjacentHTML("beforebegin", html);
+    document.getElementById('main-content').innerHTML = html; // Insert into main-content div
     restaurantsContainer = document.querySelector(".restaurants");
     return true;
   } catch (error) {
@@ -190,9 +189,52 @@ async function loadMainTemplate() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  loadMainTemplate().then((success) => {
-    if (success) {
+async function loadHeader() {
+    try {
+        const response = await fetch('../../components/header/index.html');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.text();
+        document.getElementById('header').innerHTML = data;
+        const headerScript = document.createElement('script');
+        headerScript.src = '../../components/header/script.js';
+        document.body.appendChild(headerScript);
+        return true;
+    } catch (error) {
+        console.error("Error loading header:", error);
+        return false;
+    }
+}
+
+async function loadFooter() {
+    try {
+        const response = await fetch('../../components/footer/index.html');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.text();
+        document.getElementById('footer').innerHTML = data;
+        const footerScript = document.createElement('script');
+        footerScript.src = '../../components/footer/script.js';
+        document.body.appendChild(footerScript);
+        return true;
+    } catch (error) {
+        console.error("Error loading footer:", error);
+        return false;
+    }
+}
+
+
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const [headerLoaded, mainTemplateLoaded, footerLoaded] = await Promise.all([
+      loadHeader(),
+      loadMainTemplate(),
+      loadFooter(),
+    ]);
+
+    if (mainTemplateLoaded) {
       initializeSwiper();
       fetch("cards.json")
         .then((response) => response.json())
@@ -221,6 +263,18 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch((error) =>
           console.error("Error loading restaurant data:", error)
         );
+    } else {
+      console.error("Failed to load main template. Restaurant data and Swiper initialization skipped.");
     }
-  });
+
+    if (!headerLoaded) {
+      console.error("Failed to load header.");
+    }
+    if (!footerLoaded) {
+      console.error("Failed to load footer.");
+    }
+
+  } catch (error) {
+    console.error("Error during initial page load:", error);
+  }
 });

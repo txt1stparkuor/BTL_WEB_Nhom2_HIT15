@@ -231,7 +231,6 @@ menuIcon.addEventListener('click', function () {
         signupBtn.click();
     });
 });
-
 const initPhoneCodeSelection = () => {
     const phoneCode = loginOverlay.querySelector(".phone-code");
     const countryList = loginOverlay.querySelector(".country-list");

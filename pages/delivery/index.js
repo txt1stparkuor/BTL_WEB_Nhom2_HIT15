@@ -255,9 +255,48 @@ function setupCuisineSearch() {
     }
   });
 }
+async function loadHeader() {
+  try {
+      const response = await fetch('../../components/header/index.html');
+      if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.text();
+      document.getElementById('header').innerHTML = data;
+      const headerScript = document.createElement('script');
+      headerScript.src = '../../components/header/script.js';
+      document.body.appendChild(headerScript);
+      return true;
+  } catch (error) {
+      console.error("Error loading header:", error);
+      return false;
+  }
+}
+
+async function loadFooter() {
+  try {
+      const response = await fetch('../../components/footer/index.html');
+      if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.text();
+      document.getElementById('footer').innerHTML = data;
+      const footerScript = document.createElement('script');
+      footerScript.src = '../../components/footer/script.js';
+      document.body.appendChild(footerScript);
+      return true;
+  } catch (error) {
+      console.error("Error loading footer:", error);
+      return false;
+  }
+}
 
 document.addEventListener("DOMContentLoaded", async () => {
   try {
+    const [headerLoaded, mainTemplateLoaded, footerLoaded] = await Promise.all([
+      loadHeader(),
+      loadFooter(),
+    ]);
     const response = await fetch("cards.json");
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);

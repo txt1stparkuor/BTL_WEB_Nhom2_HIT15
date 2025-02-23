@@ -119,3 +119,7 @@ main .swiper-navigation {
   font-size: var(--fs--small-medium);
   font-weight: 500;
 }
+footer i {
+  font-size: 1.2em;
+  margin: 0 .3em;
+}

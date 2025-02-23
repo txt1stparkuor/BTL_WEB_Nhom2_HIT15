@@ -10,4 +10,13 @@
     --fs--medium-large: 1.25rem; /* used for selection navbar links */
     --fs--base: 1rem;          /* used for general text, description links, name and rating text */
     --fs--small-medium: 0.875rem; /* used for filter buttons, discount text, info container text */
+
+    --text-color: #fff;
+    --icon-primary-color: #fe7784;
+    --icon-secondary-color: #a19f9f;
+    --icon-tertiary-color: #4d4d4d;
+    --border-primary-color: #b3b2b2;
+    --border-secondary-color: #e8e8e8;
+    --fill-button-primary: #e03546;
+    --fill-button-secondary: #e15563;
 }
