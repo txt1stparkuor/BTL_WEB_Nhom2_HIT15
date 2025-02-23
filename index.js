@@ -1,19 +1,19 @@
 //LOAD COMPONENTS
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('../../components/explore-options-near-me/index.html')
+    fetch('./components/explore-options-near-me/index.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('explore-container').innerHTML = data;
             const exploreScript = document.createElement('script');
-            exploreScript.src = '../../components/explore-options-near-me/script.js';
+            exploreScript.src = './components/explore-options-near-me/script.js';
             document.body.appendChild(exploreScript);
         });
-    fetch('../../components/footer/index.html')
+    fetch('./components/footer/index.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer').innerHTML = data;
             const footerScript = document.createElement('script');
-            footerScript.src = '../../components/footer/script.js';
+            footerScript.src = './components/footer/script.js';
             document.body.appendChild(footerScript);
         });
 })
@@ -33,9 +33,9 @@ inputLocation.addEventListener('click', (e) => {
         currIcon.className = 'fa-solid fa-caret-down';
         arrowDown.style.transform = 'translateY(-10px)';
     }
-    detectLocation.style.display = detectLocation.style.display === 'block'
+    detectLocation.style.display = detectLocation.style.display === 'flex'
         ? 'none'
-        : 'block';
+        : 'flex';
 
 });
 document.addEventListener('click', () => {

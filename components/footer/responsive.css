@@ -39,6 +39,7 @@
 
     .content-navlink {
         display: grid;
+        justify-items: center;
     }
 
     .content-navlink .sub-nav:last-child {

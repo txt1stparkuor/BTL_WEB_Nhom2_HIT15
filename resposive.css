@@ -8,17 +8,13 @@
     }
 
     .highlight-cards {
-        padding: 0 8.6em;
+        padding: 0 .25rem;
     }
 }
 
 @media (width <=1024px) {
     .header-nav {
         padding: 1.2em 0em;
-    }
-
-    .highlight-cards {
-        padding: 0em;
     }
 
     .collections-sections {
