@@ -56,6 +56,12 @@ h5 {
     margin: 0 auto;
 }
 
+.text-overflow {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
 /* HEADER */
 
 header {
@@ -373,7 +379,6 @@ i {
 }
 
 .locality {
-    justify-content: space-between;
     align-items: center;
     border: 1px solid var(--border-secondary-color);
     border-radius: 8px;
@@ -397,11 +402,9 @@ i {
 .locality .left {
     font-weight: 400;
     margin-bottom: .4em;
-}
-
-.locality .left .locality-title {
     font-size: 1.1em;
     color: var(--icon-tartiary-color);
+    width: calc(100% - 1.5rem);
 }
 
 .locality .left .place {

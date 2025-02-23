@@ -33,12 +33,16 @@ inputLocation.addEventListener('click', (e) => {
         currIcon.className = 'fa-solid fa-caret-down';
         arrowDown.style.transform = 'translateY(-10px)';
     }
-    detectLocation.style.display = 'block';
+    detectLocation.style.display = detectLocation.style.display === 'block'
+        ? 'none'
+        : 'block';
+
 });
 document.addEventListener('click', () => {
     detectLocation.style.display = 'none';
-
 });
+
+
 
 //SEE MORE SEE LESS
 document.addEventListener('DOMContentLoaded', () => {
@@ -146,6 +150,13 @@ function updateBtnText() {
 
 updateBtnText();
 window.matchMedia("(max-width: 880px)").addEventListener("change", updateBtnText);
+
+function overflowText() {
+    let text = document.getElementsByClassName('locality-title');
+    if (window.matchMedia("(max-width: 1024px)").matches) {
+
+    }
+}
 
 
 //LOGIN-SIGNUP OVERLAY

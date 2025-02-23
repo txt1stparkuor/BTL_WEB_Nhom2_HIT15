@@ -12,7 +12,6 @@
     }
 }
 
-
 @media (width <=1024px) {
     .header-nav {
         padding: 1.2em 0em;
@@ -24,10 +23,6 @@
 
     .collections-sections {
         gap: .65em;
-    }
-
-    .content-navlink p {
-        font-size: 1.03em;
     }
 
     .nav_items ul {
@@ -42,7 +37,6 @@
     .wrapper {
         max-width: 950px;
     }
-
 }
 
 @media (width <=880px) {
@@ -96,22 +90,6 @@
     }
 }
 
-@media (width <=635px) {
-    .content-navlink {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 1em;
-    }
-
-    .content-navlink {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 1em;
-    }
-
-
-}
-
 @media (width <=600px) {
     body {
         display: flex;
@@ -160,33 +138,14 @@
         align-items: center;
     }
 
-    .download-buttons {
-        flex-direction: column !important;
+    .email-input {
+        display: flex;
+        justify-content: space-around;
         align-items: center;
-        gap: 1em;
-    }
-
-    .download-buttons>div {
-        width: 70%;
-        max-width: 200px;
-    }
-
-    .download-buttons img {
-        width: 100%;
-        height: auto;
-    }
-
-    .store-section {
-        width: 100%;
-    }
-
-    .download-buttons .download img {
-        border-radius: .4em;
     }
 }
 
 @media (width < 533px) {
-
     .input-container {
         width: 375px;
     }
@@ -197,10 +156,6 @@
         gap: 1em;
     }
 
-    .content-navlink {
-        display: grid;
-    }
-
     .wrapper {
         max-width: 430px;
     }
@@ -209,13 +164,10 @@
         width: 48.6%;
     }
 
-    .header-footer {
-        flex-direction: column;
+    .email-input {
+        gap: 0.5em;
     }
 
-    .content-navlink:last-child {
-        grid-row: span 2;
-    }
 }
 
 @media (width < 380px) {
@@ -231,14 +183,12 @@
         width: 100%;
     }
 
-    .store-section {
-        width: 100%;
-    }
-
     .app-options {
         width: 100%;
         justify-content: space-around;
     }
 
-
+    .title h1 {
+        font-size: 1.5rem;
+    }
 }

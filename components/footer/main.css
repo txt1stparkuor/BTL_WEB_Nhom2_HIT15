@@ -4,6 +4,9 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 1.75em;
+}
+
+.background-wrapper-footer {
     background-color: rgb(248, 248, 248);
 }
 
@@ -90,7 +93,6 @@ footer .header-logo {
 
 .social-nav {
     margin-bottom: 1em;
-    justify-content: space-between;
 }
 
 .social-nav i {
@@ -167,6 +169,8 @@ footer #last-child {
     font-size: 1.03em;
     margin-bottom: 1.8em;
 }
+
+
 
 .download {
     width: 9em;
