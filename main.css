@@ -234,7 +234,9 @@ i {
     transition: all 0.3s ease;
     position: relative;
 }
-
+.highlight-cards .highlight-card {
+    color: rgb(54, 54, 54) !important;
+}
 .highlight-cards .highlight-card:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
