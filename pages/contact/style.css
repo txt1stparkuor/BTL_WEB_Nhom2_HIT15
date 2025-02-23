@@ -14,9 +14,35 @@ nav{
     gap: 20px;
     height: 74px;
 }
+a {
+    text-decoration: none;
+    color: var(--icon-tertiary-color);
+}
+
+li {
+    list-style-type: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: normal;
+}
+
+
 .zomato{
     height: 26px;
     cursor: pointer;
+}
+.flex {
+    display: flex;
+}
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 nav>input{
@@ -112,4 +138,7 @@ nav>p:hover{
 .issue-report{
     color: rgb(239, 79, 95);
     cursor: pointer;
+}
+#footer {
+    margin-top: 2rem;
 }
