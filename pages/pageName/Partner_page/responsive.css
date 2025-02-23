@@ -1,67 +1,84 @@
-
 @media (min-width: 1400px) {
     h3 {
-        font-size: 24px; 
-        max-width: 50%; 
+        font-size: 24px;
+        max-width: 50%;
         white-space: normal;
         line-height: 1.4;
     }
-    .carousel-track { gap: 5px; }
-    .card { min-width: 280px; }
-    .carousel-title { font-size: 24px; }
+
+    .carousel-track {
+        gap: 5px;
+    }
+
+    .card {
+        min-width: 280px;
+    }
+
+    .carousel-title {
+        font-size: 24px;
+    }
 }
 
 @media (max-width: 1024px) {
     header {
         padding: 8px 40px;
     }
+
     .hero-content h1 {
         font-size: 36px;
     }
+
     .hero-content p {
         font-size: 18px;
     }
+
     .cta-btn {
         padding: 15px 30px;
         font-size: 20px;
     }
+
     .details {
         flex-direction: column;
         align-items: center;
         padding: 40px;
         max-width: 90%;
     }
+
     .bot {
         flex-direction: column;
     }
+
     .bot-item {
         width: 100%;
     }
+
     video {
         width: 100%;
         max-width: 400px;
     }
-    .left, .right {
+
+    .left,
+    .right {
         width: 100%;
     }
+
     .feature {
         width: 45%;
     }
+
     .footer-container {
         align-items: center;
         display: flex;
         flex-direction: row;
+        width: 100%;
     }
-
     .footer-links {
-        flex-wrap: wrap;
-        justify-content: center; 
-        gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .footer-column {
-        flex: 1 1 45%; 
-        text-align: center; 
+        flex: 1 1 45%;
+        text-align: center;
     }
 
     .footer-contact {
@@ -86,11 +103,11 @@
 
 @media (max-width: 768px) {
     header {
-        padding: 6px 40px; 
+        padding: 6px 40px;
     }
 
     .help-info {
-        gap: 15px; 
+        gap: 15px;
     }
 
     .help-info span {
@@ -98,88 +115,122 @@
     }
 
     .help-btn {
-        font-size: 13px; 
-        padding: 6px 14px; 
+        font-size: 13px;
+        padding: 6px 14px;
         border-radius: 12px;
     }
+
     #logo img {
         width: 50px;
     }
+
     .hero-content h1 {
         font-size: 24px;
         text-align: center;
         margin-top: -40px;
     }
+
     .hero-content p {
         font-size: 16px;
         text-align: center;
     }
+
     .details {
-        flex-direction: column-reverse; /* Đưa video lên trên */
+        flex-direction: column-reverse;
+        /* Đưa video lên trên */
         align-items: center;
         text-align: center;
         padding: 20px;
     }
+
     .right {
         width: 100%;
         display: flex;
         justify-content: center;
     }
+
     video {
         width: 100%;
         max-width: 350px;
         height: auto;
     }
+
     .left {
         width: 100%;
         text-align: center;
     }
-    button.prev, button.next {
+
+    button.prev,
+    button.next {
         width: 35px;
         height: 35px;
         font-size: 20px;
     }
+
     .fre-title {
         font-size: 20px;
     }
+
     .fre-question {
         font-size: 16px;
     }
+
     .fre-item {
-        max-width: 95%; 
+        max-width: 95%;
         padding: 10px;
     }
 
     .fre-answer {
-        font-size: 14px; 
+        font-size: 14px;
         padding: 8px;
     }
+
     ul li b {
-        min-width: 150px; 
+        min-width: 150px;
     }
+
     .footer-container {
         flex-direction: column;
         align-items: center;
-        text-align: center;
     }
 
     .footer-links {
-        flex-direction: column; 
-        align-items: center; 
+        grid-template-columns: repeat(1, 1fr);
         text-align: center;
-        gap: 20px; 
     }
 
     .footer-column {
-        width: 100%; 
+        width: 100%;
     }
 
-    .footer-contact {
-        display: flex;
+    .contact-buttons {
         flex-direction: column;
         align-items: center;
     }
 
+    .contact-btn {
+        word-break: break-word;
+    }
+    .ft- .footer-links {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-column {
+        width: 100%;
+    }
+
+    .footer-contact {
+        text-align: center;
+    }
+    .icons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
     .contact-buttons {
         display: flex;
         flex-direction: column;
@@ -205,28 +256,43 @@
         text-align: center;
         font-size: 12px;
     }
+    
 
 }
+
 @media (max-width: 360px) {
-    .carousel-container { width: 95%; }
-    .card { min-width: 90%; max-width: 90%; margin: 0 auto; }
-    button.prev, button.next { display: none; }
+    .carousel-container {
+        width: 95%;
+    }
+
+    .card {
+        min-width: 90%;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    button.prev,
+    button.next {
+        display: none;
+    }
+
     .fre-item {
-        max-width: 100%; 
+        max-width: 100%;
         padding: 8px;
     }
 
     .fre-answer {
-        font-size: 13px; 
+        font-size: 13px;
         padding: 5px;
     }
+
     ul li {
         display: block;
         padding-left: 15px;
     }
 
     ul li b {
-        display: block; 
+        display: block;
         min-width: unset;
     }
 }
